@@ -15,6 +15,7 @@ var coffeeSources = ['scripts/hello.coffee'],
 	pugSources = ['pug/**/!(_)*.pug'],
 	pugIncludes = ['pug/includes/**/*.pug'],
 	jsSources = ['assets/**/*.js'],
+	imgSources = ['assets/**/*.jpg', 'assets/**/*.png'],
 	sassSources = ['assets/scss/**/*.scss'],
 	htmlSources = ['**/*.html', '!node_modules/**'],
 	dist = 'dist';
@@ -42,7 +43,6 @@ gulp.task('html', function() {
 		.pipe(connect.reload())
 });
 
-
 gulp.task('js', function() {
 	gulp.src(jsSources)
 		.pipe(sourcemaps.init())
@@ -52,6 +52,12 @@ gulp.task('js', function() {
 		.pipe(gulp.dest('dist/assets'))
 		.pipe(connect.reload())
 });
+
+gulp.task('images', function () {
+	gulp.src(imgSources)
+		.pipe(gulp.dest(dist))
+});
+
 
 gulp.task('pug', function () {
 	gulp.src(pugSources)
@@ -76,11 +82,11 @@ gulp.task('sass', function () {
 
 
 //watch
-gulp.task('watch', ['sass', 'js', 'html', 'pug'], function () {
+gulp.task('watch', ['sass', 'js', 'html', 'images', 'pug'], function () {
 	gulp.watch(sassSources, ['sass']);
 	gulp.watch(pugSources, ['pug']);
 	gulp.watch(pugIncludes, ['pug']);
 	//gulp.watch(htmlSources, ['html']);
 });
 
-gulp.task('default', ['sass', 'js', 'pug', 'html', 'watch', 'connect']);
+gulp.task('default', ['sass', 'js', 'pug', 'html', 'images', 'watch', 'connect']);
