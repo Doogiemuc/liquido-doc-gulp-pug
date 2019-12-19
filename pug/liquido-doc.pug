@@ -1,0 +1,725 @@
+doctype html
+head
+	include includes/_html-head.pug
+	title LIQUIDO Documentation
+body
+	include includes/_fixed-nav.pug
+
+.docs-wrapper
+	#docs-sidebar.docs-sidebar
+		.top-search-box.d-lg-none.p-3
+			form.search-form
+				input.form-control.search-input(type='text' placeholder='Search the docs...' name='search')
+				button.btn.search-btn(type='submit' value='Search')
+					i.fas.fa-search
+		nav#docs-nav.docs-nav.navbar
+			ul.section-items.list-unstyled.nav.flex-column.pb-3
+				li.nav-item.section-title
+					a.nav-link.scrollto.active(href='#section-1')
+						span.theme-icon-holder.mr-2
+							i.fas.fa-map-signs
+						| Introduction
+				li.nav-item
+					a.nav-link.scrollto(href='#item-1-1') Section Item 1.1
+				li.nav-item
+					a.nav-link.scrollto(href='#item-1-2') Section Item 1.2
+				li.nav-item
+					a.nav-link.scrollto(href='#item-1-3') Section Item 1.3
+				li.nav-item
+					a.nav-link.scrollto(href='#item-1-4') Section Item 1.4
+				li.nav-item
+					a.nav-link.scrollto(href='#item-1-5') Section Item 1.5
+				li.nav-item
+					a.nav-link.scrollto(href='#item-1-6') Section Item 1.6
+				li.nav-item.section-title.mt-3
+					a.nav-link.scrollto(href='#section-2')
+						span.theme-icon-holder.mr-2
+							i.fas.fa-arrow-down
+						| Installation
+				li.nav-item
+					a.nav-link.scrollto(href='#item-2-1') Section Item 2.1
+				li.nav-item
+					a.nav-link.scrollto(href='#item-2-2') Section Item 2.2
+				li.nav-item
+					a.nav-link.scrollto(href='#item-2-3') Section Item 2.3
+				li.nav-item.section-title.mt-3
+					a.nav-link.scrollto(href='#section-3')
+						span.theme-icon-holder.mr-2
+							i.fas.fa-box
+						| APIs
+				li.nav-item
+					a.nav-link.scrollto(href='#item-3-1') Section Item 3.1
+				li.nav-item
+					a.nav-link.scrollto(href='#item-3-2') Section Item 3.2
+				li.nav-item
+					a.nav-link.scrollto(href='#item-3-3') Section Item 3.3
+				li.nav-item.section-title.mt-3
+					a.nav-link.scrollto(href='#section-4')
+						span.theme-icon-holder.mr-2
+							i.fas.fa-cogs
+						| Integrations
+				li.nav-item
+					a.nav-link.scrollto(href='#item-4-1') Section Item 4.1
+				li.nav-item
+					a.nav-link.scrollto(href='#item-4-2') Section Item 4.2
+				li.nav-item
+					a.nav-link.scrollto(href='#item-4-3') Section Item 4.3
+				li.nav-item.section-title.mt-3
+					a.nav-link.scrollto(href='#section-5')
+						span.theme-icon-holder.mr-2
+							i.fas.fa-tools
+						| Utilities
+				li.nav-item
+					a.nav-link.scrollto(href='#item-5-1') Section Item 5.1
+				li.nav-item
+					a.nav-link.scrollto(href='#item-5-2') Section Item 5.2
+				li.nav-item
+					a.nav-link.scrollto(href='#item-5-3') Section Item 5.3
+				li.nav-item.section-title.mt-3
+					a.nav-link.scrollto(href='#section-6')
+						span.theme-icon-holder.mr-2
+							i.fas.fa-laptop-code
+						| Web
+				li.nav-item
+					a.nav-link.scrollto(href='#item-6-1') Section Item 6.1
+				li.nav-item
+					a.nav-link.scrollto(href='#item-6-2') Section Item 6.2
+				li.nav-item
+					a.nav-link.scrollto(href='#item-6-3') Section Item 6.3
+				li.nav-item.section-title.mt-3
+					a.nav-link.scrollto(href='#section-7')
+						span.theme-icon-holder.mr-2
+							i.fas.fa-tablet-alt
+						| Mobile
+				li.nav-item
+					a.nav-link.scrollto(href='#item-7-1') Section Item 7.1
+				li.nav-item
+					a.nav-link.scrollto(href='#item-7-2') Section Item 7.2
+				li.nav-item
+					a.nav-link.scrollto(href='#item-7-3') Section Item 7.3
+				li.nav-item.section-title.mt-3
+					a.nav-link.scrollto(href='#section-8')
+						span.theme-icon-holder.mr-2
+							i.fas.fa-book-reader
+						| Resources
+				li.nav-item
+					a.nav-link.scrollto(href='#item-8-1') Section Item 8.1
+				li.nav-item
+					a.nav-link.scrollto(href='#item-8-2') Section Item 8.2
+				li.nav-item
+					a.nav-link.scrollto(href='#item-8-3') Section Item 8.3
+				li.nav-item.section-title.mt-3
+					a.nav-link.scrollto(href='#section-9')
+						span.theme-icon-holder.mr-2
+							i.fas.fa-lightbulb
+						| FAQs
+				li.nav-item
+					a.nav-link.scrollto(href='#item-9-1') Section Item 9.1
+				li.nav-item
+					a.nav-link.scrollto(href='#item-9-2') Section Item 9.2
+				li.nav-item
+					a.nav-link.scrollto(href='#item-9-3') Section Item 9.3
+		// //docs-nav
+	// //docs-sidebar
+	.docs-content
+		.container
+			article#section-1.docs-article
+				header.docs-header
+					h1.docs-heading
+						| Introduction 
+						span.docs-time Last updated: 2019-06-01
+					section.docs-intro
+						p
+							| Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.
+					// //docs-intro
+					h5 Github Code Example:
+					p
+						| You can 
+						a.theme-link(href='https://gist.github.com/' target='_blank') embed your code snippets using Github gists
+					.docs-code-block
+						// ** Embed github code starts **
+						script(src='https://gist.github.com/xriley/fce6cf71edfd2dadc7919eb9c98f3f17.js')
+						// ** Embed github code ends **
+					// //docs-code-block
+					h5 Highlight.js Example:
+					p
+						| You can 
+						a.theme-link(href='https://github.com/highlightjs/highlight.js' target='_blank') embed your code snippets using highlight.js
+						|	It supports 
+						a.theme-link(href='https://highlightjs.org/static/demo/' target='_blank') 185 languages and 89 styles
+						| .
+					p
+						| This template uses 
+						a.theme-link(href='https://highlightjs.org/static/demo/' target='_blank') Atom One Dark
+						|	style for the code blocks: 
+						br
+						code
+							| &lt;link rel=&quot;stylesheet&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css&quot;&gt;
+					.docs-code-block
+						pre.shadow-lg.rounded.
+							
+					// //docs-code-block
+				section#item-1-1.docs-section
+					h2.section-heading Section Item 1.1
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id.
+					p
+						| Code Example: 
+						code npm install &lt;package&gt;
+					h5 Unordered List Examples:
+					ul
+						li
+							strong.mr-1 HTML5:
+							code &lt;div id=&quot;foo&quot;&gt;
+						li
+							strong.mr-1 CSS:
+							code #foo { color: red }
+						li
+							strong.mr-1 JavaScript:
+							code console.log(&apos;#foo\bar&apos;);
+					h5 Ordered List Examples:
+					ol
+						li Download lorem ipsum dolor sit amet.
+						li Click ipsum faucibus venenatis.
+						li Configure fermentum malesuada nunc.
+						li Deploy donec non ante libero.
+					h5 Callout Examples:
+					.callout-block.callout-block-info
+						.content
+							h4.callout-title
+								span.callout-icon-holder.mr-1
+									i.fas.fa-info-circle
+								// //icon-holder
+								| Note
+							p
+								| Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+								code &lt;code&gt;
+								|	, Nemo enim ipsam voluptatem quia voluptas 
+								a(href='#') link example
+								|	sit aspernatur aut odit aut fugit.
+						// //content
+					// //callout-block
+					.callout-block.callout-block-warning
+						.content
+							h4.callout-title
+								span.callout-icon-holder.mr-1
+									i.fas.fa-bullhorn
+								// //icon-holder
+								| Warning
+							p
+								| Nunc hendrerit odio quis dignissim efficitur. Proin ut finibus libero. Morbi posuere fringilla felis eget sagittis. Fusce sem orci, cursus in tortor 
+								a(href='#') link example
+								|	tellus vel diam viverra elementum.
+						// //content
+					// //callout-block
+					.callout-block.callout-block-success
+						.content
+							h4.callout-title
+								span.callout-icon-holder.mr-1
+									i.fas.fa-thumbs-up
+								// //icon-holder
+								| Tip
+							p
+								| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+								a(href='#') Link example
+								|	aenean commodo ligula eget dolor.
+						// //content
+					// //callout-block
+					.callout-block.callout-block-danger.mr-1
+						.content
+							h4.callout-title
+								span.callout-icon-holder
+									i.fas.fa-exclamation-triangle
+								// //icon-holder
+								| Danger
+							p
+								| Morbi eget interdum sapien. Donec sed turpis sed nulla lacinia accumsan vitae ut tellus. Aenean vestibulum 
+								a(href='#') Link example
+								|	maximus ipsum vel dignissim. Morbi ornare elit sit amet massa feugiat, viverra dictum ipsum pellentesque.
+						// //content
+					// //callout-block
+					h5.mt-5 Alert Examples:
+					.alert.alert-primary(role='alert')
+						| This is a primary alert&mdash;check it out!
+					.alert.alert-secondary(role='alert')
+						| This is a secondary alert&mdash;check it out!
+					.alert.alert-success(role='alert')
+						| This is a success alert&mdash;check it out!
+					.alert.alert-danger(role='alert')
+						| This is a danger alert&mdash;check it out!
+					.alert.alert-warning(role='alert')
+						| This is a warning alert&mdash;check it out!
+					.alert.alert-info(role='alert')
+						| This is a info alert&mdash;check it out!
+					.alert.alert-light(role='alert')
+						| This is a light alert&mdash;check it out!
+					.alert.alert-dark(role='alert')
+						| This is a dark alert&mdash;check it out!
+				// //section
+				section#item-1-2.docs-section
+					h2.section-heading Section Item 1.2
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+					h5 Image Lightbox Example:
+					figure.figure.docs-figure.py-3
+						a(href='assets/images/features/appify-theme-projects-overview-lg.jpg' data-title='Image Lightbox Example' data-toggle='lightbox')
+							img.figure-img.img-fluid.shadow.rounded(src='assets/images/features/appify-add-members.gif' alt='' style='width: 600px;')
+						figcaption.figure-caption.mt-3
+							i.fas.fa-info-circle.mr-2
+							| Credit: the above screencast is taken from 
+							a.theme-link(href='https://themes.3rdwavemedia.com/bootstrap-templates/product/appify-bootstrap-4-admin-template-for-app-developers/' target='_blank')
+								i.fas.fa-external-link-alt
+								| Appify theme
+							| .
+					h5 Custom Table:
+					.table-responsive.my-4
+						table.table.table-bordered
+							tbody
+								tr
+									th.theme-bg-light
+										a.theme-link(href='#') Option 1
+									td Option 1 desc lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+								tr
+									th.theme-bg-light
+										a.theme-link(href='#') Option 2
+									td Option 2 desc lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+								tr
+									th.theme-bg-light
+										a.theme-link(href='#') Option 3
+									td Option 3 desc lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+								tr
+									th.theme-bg-light
+										a.theme-link(href='#') Option 4
+									td Option 4 desc lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+					// //table-responsive
+					h5 Stripped Table:
+					.table-responsive.my-4
+						table.table.table-striped
+							thead
+								tr
+									th(scope='col') #
+									th(scope='col') First
+									th(scope='col') Last
+									th(scope='col') Handle
+							tbody
+								tr
+									th(scope='row') 1
+									td Mark
+									td Otto
+									td @mdo
+								tr
+									th(scope='row') 2
+									td Jacob
+									td Thornton
+									td @fat
+								tr
+									th(scope='row') 3
+									td Larry
+									td the Bird
+									td @twitter
+					// //table-responsive
+					h5 Bordered Dark Table:
+					.table-responsive.my-4
+						table.table.table-bordered.table-dark
+							thead
+								tr
+									th(scope='col') #
+									th(scope='col') First
+									th(scope='col') Last
+									th(scope='col') Handle
+							tbody
+								tr
+									th(scope='row') 1
+									td Mark
+									td Otto
+									td @mdo
+								tr
+									th(scope='row') 2
+									td Jacob
+									td Thornton
+									td @fat
+								tr
+									th(scope='row') 3
+									td Larry
+									td the Bird
+									td @twitter
+					// //table-responsive
+				// //section
+				section#item-1-3.docs-section
+					h2.section-heading Section Item 1.3
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+					h5 Badges Examples:
+					.my-4
+						span.badge.badge-primary Primary
+						span.badge.badge-secondary Secondary
+						span.badge.badge-success Success
+						span.badge.badge-danger Danger
+						span.badge.badge-warning Warning
+						span.badge.badge-info Info
+						span.badge.badge-light Light
+						span.badge.badge-dark Dark
+					h5 Button Examples:
+					.row.my-3
+						.col-md-6.col-12
+							ul.list.list-unstyled.pl-0
+								li
+									a.btn.btn-primary(href='#') Primary Button
+								li
+									a.btn.btn-secondary(href='#') Secondary Button
+								li
+									a.btn.btn-light(href='#') Light Button
+								li
+									a.btn.btn-success(href='#') Succcess Button
+								li
+									a.btn.btn-info(href='#') Info Button
+								li
+									a.btn.btn-warning(href='#') Warning Button
+								li
+									a.btn.btn-danger(href='#') Danger Button
+						.col-md-6.col-12
+							ul.list.list-unstyled.pl-0
+								li
+									a.btn.btn-primary(href='#')
+										i.fas.fa-download.mr-2
+										|	Download Now
+								li
+									a.btn.btn-secondary(href='#')
+										i.fas.fa-book.mr-2
+										|	View Docs
+								li
+									a.btn.btn-light(href='#')
+										i.fas.fa-arrow-alt-circle-right.mr-2
+										|	View Features
+								li
+									a.btn.btn-success(href='#')
+										i.fas.fa-code-branch.mr-2
+										|	Fork Now
+								li
+									a.btn.btn-info(href='#')
+										i.fas.fa-play-circle.mr-2
+										|	Find Out Now
+								li
+									a.btn.btn-warning(href='#')
+										i.fas.fa-bug.mr-2
+										|	Report Bugs
+								li
+									a.btn.btn-danger(href='#')
+										i.fas.fa-exclamation-circle.mr-2
+										|	Submit Issues
+					// //row
+					h5 Progress Examples:
+					.my-4
+						.progress.my-4
+							.progress-bar.bg-success(role='progressbar' style='width: 25%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+						.progress.my-4
+							.progress-bar.bg-info(role='progressbar' style='width: 50%' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100')
+						.progress.my-4
+							.progress-bar.bg-warning(role='progressbar' style='width: 75%' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
+						.progress.my-4
+							.progress-bar.bg-danger(role='progressbar' style='width: 100%' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100')
+				// //section
+				section#item-1-4.docs-section
+					h2.section-heading Section Item 1.4
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+					h5 Pagination Example:
+					nav(aria-label='Page navigation example')
+						ul.pagination.pl-0
+							li.page-item.disabled
+								a.page-link(href='#') Previous
+							li.page-item.active
+								a.page-link(href='#') 1
+							li.page-item
+								a.page-link(href='#') 2
+							li.page-item
+								a.page-link(href='#') 3
+							li.page-item
+								a.page-link(href='#') Next
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-1-5.docs-section
+					h2.section-heading Section Item 1.5
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-1-6.docs-section
+					h2.section-heading Section Item 1.6
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+			article#section-2.docs-article
+				header.docs-header
+					h1.docs-heading Installation
+					section.docs-intro
+						p
+							| Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.
+					// //docs-intro
+				section#item-2-1.docs-section
+					h2.section-heading Section Item 2.1
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-2-2.docs-section
+					h2.section-heading Section Item 2.2
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-2-3.docs-section
+					h2.section-heading Section Item 2.3
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+			// //docs-article
+			article#section-3.docs-article
+				header.docs-header
+					h1.docs-heading APIs
+					section.docs-intro
+						p
+							| Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.
+					// //docs-intro
+				section#item-3-1.docs-section
+					h2.section-heading Section Item 3.1
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-3-2.docs-section
+					h2.section-heading Section Item 3.2
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-3-3.docs-section
+					h2.section-heading Section Item 3.3
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+			// //docs-article
+			article#section-4.docs-article
+				header.docs-header
+					h1.docs-heading Intergrations
+					section.docs-intro
+						p
+							| Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.
+					// //docs-intro
+				section#item-4-1.docs-section
+					h2.section-heading Section Item 4.1
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-4-2.docs-section
+					h2.section-heading Section Item 4.2
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-4-3.docs-section
+					h2.section-heading Section Item 4.3
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+			// //docs-article
+			article#section-5.docs-article
+				header.docs-header
+					h1.docs-heading Utilities
+					section.docs-intro
+						p
+							| Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.
+					// //docs-intro
+				section#item-5-1.docs-section
+					h2.section-heading Section Item 5.1
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-5-2.docs-section
+					h2.section-heading Section Item 5.2
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-5-3.docs-section
+					h2.section-heading Section Item 5.3
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+			// //docs-article
+			article#section-6.docs-article
+				header.docs-header
+					h1.docs-heading Web
+					section.docs-intro
+						p
+							| Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.
+					// //docs-intro
+				section#item-6-1.docs-section
+					h2.section-heading Section Item 6.1
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-6-2.docs-section
+					h2.section-heading Section Item 6.2
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-6-3.docs-section
+					h2.section-heading Section Item 6.3
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+			// //docs-article
+			article#section-7.docs-article
+				header.docs-header
+					h1.docs-heading Mobile
+					section.docs-intro
+						p
+							| Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.
+					// //docs-intro
+				section#item-7-1.docs-section
+					h2.section-heading Section Item 7.1
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-7-2.docs-section
+					h2.section-heading Section Item 7.2
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-7-3.docs-section
+					h2.section-heading Section Item 7.3
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+			// //docs-article
+			article#section-8.docs-article
+				header.docs-header
+					h1.docs-heading Resources
+					section.docs-intro
+						p
+							| Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.
+					// //docs-intro
+				section#item-8-1.docs-section
+					h2.section-heading Section Item 8.1
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-8-2.docs-section
+					h2.section-heading Section Item 8.2
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+				section#item-8-3.docs-section
+					h2.section-heading Section Item 8.3
+					p
+						| Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.
+				// //section
+			// //docs-article
+			article#section-9.docs-article
+				header.docs-header
+					h1.docs-heading FAQs
+					section.docs-intro
+						p Section intro goes here. You can list all your FAQs using the format below.
+					// //docs-intro
+				section#item-9-1.docs-section
+					h2.section-heading
+						| Section Item 9.1 
+						small (FAQ Category One)
+					h5.pt-3
+						i.fas.fa-question-circle.mr-1
+						| What&apos;s sit amet quam eget lacinia?
+					p
+						| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+					h5.pt-3
+						i.fas.fa-question-circle.mr-1
+						| How to ipsum dolor sit amet quam tortor?
+					p
+						| Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.
+					h5.pt-3
+						i.fas.fa-question-circle.mr-1
+						| Can I	bibendum sodales?
+					p
+						| Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.
+					h5.pt-3
+						i.fas.fa-question-circle.mr-1
+						| Where arcu sed urna gravida?
+					p
+						| Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac. In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec urna.
+				// //section
+				section#item-9-2.docs-section
+					h2.section-heading
+						| Section Item 9.2 
+						small (FAQ Category Two)
+					h5.pt-3
+						i.fas.fa-question-circle.mr-1
+						| What&apos;s sit amet quam eget lacinia?
+					p
+						| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+					h5.pt-3
+						i.fas.fa-question-circle.mr-1
+						| How to ipsum dolor sit amet quam tortor?
+					p
+						| Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.
+					h5.pt-3
+						i.fas.fa-question-circle.mr-1
+						| Can I	bibendum sodales?
+					p
+						| Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.
+					h5.pt-3
+						i.fas.fa-question-circle.mr-1
+						| Where arcu sed urna gravida?
+					p
+						| Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac. In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec urna.
+				// //section
+				section#item-9-3.docs-section
+					h2.section-heading
+						| Section Item 9.3 
+						small (FAQ Category Three)
+					h5.pt-3
+						i.fas.fa-question-circle.mr-1
+						| How to dapibus sollicitudin justo vel fermentum?
+					p
+						| Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.
+					h5.pt-3
+						i.fas.fa-question-circle.mr-1
+						| How long bibendum sodales?
+					p
+						| Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.
+					h5.pt-3
+						i.fas.fa-question-circle.mr-1
+						| Where dapibus sollicitudin?
+					p
+						| Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac. In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec urna.
+				// //section
+			// //docs-article
+			footer.footer
+				.container.text-center.py-5
+					small.copyright
+						| Template Copyright &copy; 
+						a(href='https://themes.3rdwavemedia.com/' target='_blank') 3rd Wave Media
+					ul.social-list.list-unstyled.pt-4.mb-0
+						li.list-inline-item
+							a(href='#')
+								i.fab.fa-github.fa-fw
+						li.list-inline-item
+							a(href='#')
+								i.fab.fa-twitter.fa-fw
+						li.list-inline-item
+							a(href='#')
+								i.fab.fa-slack.fa-fw
+						li.list-inline-item
+							a(href='#')
+								i.fab.fa-product-hunt.fa-fw
+						li.list-inline-item
+							a(href='#')
+								i.fab.fa-facebook-f.fa-fw
+						li.list-inline-item
+							a(href='#')
+								i.fab.fa-instagram.fa-fw
+					// //social-list
+// //docs-wrapper
+// Javascript
+script(src='assets/plugins/jquery-3.4.1.min.js')
+script(src='assets/plugins/popper.min.js')
+script(src='assets/plugins/bootstrap/js/bootstrap.min.js')
+// Page Specific JS
+script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js')
+script(src='assets/js/highlight-custom.js')
+script(src='assets/plugins/jquery.scrollTo.min.js')
+script(src='assets/plugins/lightbox/dist/ekko-lightbox.min.js')
+script(src='assets/js/docs.js')
