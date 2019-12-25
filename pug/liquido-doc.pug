@@ -6,118 +6,9 @@ body
 	include includes/_fixed-nav.pug
 
 .docs-wrapper
-	#docs-sidebar.docs-sidebar
-		.top-search-box.d-lg-none.p-3
-			form.search-form
-				input.form-control.search-input(type='text' placeholder='Search the docs...' name='search')
-				button.btn.search-btn(type='submit' value='Search')
-					i.fas.fa-search
-		nav#docs-nav.docs-nav.navbar
-			ul.section-items.list-unstyled.nav.flex-column.pb-3
-				li.nav-item.section-title
-					a.nav-link.scrollto.active(href='#liquido-user-guide')
-						span.theme-icon-holder.mr-2
-							i.fas.fa-map-signs
-						| Liquido User Guide
-				li.nav-item
-					a.nav-link.scrollto(href='#what-is-liquido') What is Liquido?
-				li.nav-item
-					a.nav-link.scrollto(href='#liquido-voting-process') Liquido Voting Process
-				li.nav-item
-					a.nav-link.scrollto(href='#register-login') Register & Login
-				li.nav-item
-
-
-				li.nav-item.section-title.mt-3
-					a.nav-link.scrollto(href='#section-2')
-						span.theme-icon-holder.mr-2
-							i.fas.fa-arrow-down
-						| Liquido Domain Objects
-				li.nav-item
-					a.nav-link.scrollto(href='#item-2-1') Ideas
-				li.nav-item
-					a.nav-link.scrollto(href='#item-2-2') Proposals
-				li.nav-item
-					a.nav-link.scrollto(href='#item-2-3') Polls
-				li.nav-item.section-title.mt-3
-					a.nav-link.scrollto(href='#section-3')
-						span.theme-icon-holder.mr-2
-							i.fas.fa-box
-						| Cast vote
-				li.nav-item
-					a.nav-link.scrollto(href='#item-3-1') Section Item 3.1
-				li.nav-item
-					a.nav-link.scrollto(href='#item-3-2') Section Item 3.2
-				li.nav-item
-					a.nav-link.scrollto(href='#item-3-3') Section Item 3.3
-				li.nav-item.section-title.mt-3
-					a.nav-link.scrollto(href='#section-4')
-						span.theme-icon-holder.mr-2
-							i.fas.fa-cogs
-						| Integrations
-				li.nav-item
-					a.nav-link.scrollto(href='#item-4-1') Section Item 4.1
-				li.nav-item
-					a.nav-link.scrollto(href='#item-4-2') Section Item 4.2
-				li.nav-item
-					a.nav-link.scrollto(href='#item-4-3') Section Item 4.3
-				li.nav-item.section-title.mt-3
-					a.nav-link.scrollto(href='#section-5')
-						span.theme-icon-holder.mr-2
-							i.fas.fa-tools
-						| Utilities
-				li.nav-item
-					a.nav-link.scrollto(href='#item-5-1') Section Item 5.1
-				li.nav-item
-					a.nav-link.scrollto(href='#item-5-2') Section Item 5.2
-				li.nav-item
-					a.nav-link.scrollto(href='#item-5-3') Section Item 5.3
-				li.nav-item.section-title.mt-3
-					a.nav-link.scrollto(href='#section-6')
-						span.theme-icon-holder.mr-2
-							i.fas.fa-laptop-code
-						| Web
-				li.nav-item
-					a.nav-link.scrollto(href='#item-6-1') Section Item 6.1
-				li.nav-item
-					a.nav-link.scrollto(href='#item-6-2') Section Item 6.2
-				li.nav-item
-					a.nav-link.scrollto(href='#item-6-3') Section Item 6.3
-				li.nav-item.section-title.mt-3
-					a.nav-link.scrollto(href='#section-7')
-						span.theme-icon-holder.mr-2
-							i.fas.fa-tablet-alt
-						| Mobile
-				li.nav-item
-					a.nav-link.scrollto(href='#item-7-1') Section Item 7.1
-				li.nav-item
-					a.nav-link.scrollto(href='#item-7-2') Section Item 7.2
-				li.nav-item
-					a.nav-link.scrollto(href='#item-7-3') Section Item 7.3
-				li.nav-item.section-title.mt-3
-					a.nav-link.scrollto(href='#section-8')
-						span.theme-icon-holder.mr-2
-							i.fas.fa-book-reader
-						| Resources
-				li.nav-item
-					a.nav-link.scrollto(href='#item-8-1') Section Item 8.1
-				li.nav-item
-					a.nav-link.scrollto(href='#item-8-2') Section Item 8.2
-				li.nav-item
-					a.nav-link.scrollto(href='#item-8-3') Section Item 8.3
-				li.nav-item.section-title.mt-3
-					a.nav-link.scrollto(href='#section-9')
-						span.theme-icon-holder.mr-2
-							i.fas.fa-lightbulb
-						| FAQs
-				li.nav-item
-					a.nav-link.scrollto(href='#item-9-1') Section Item 9.1
-				li.nav-item
-					a.nav-link.scrollto(href='#item-9-2') Section Item 9.2
-				li.nav-item
-					a.nav-link.scrollto(href='#item-9-3') Section Item 9.3
-		// //docs-nav
-	// //docs-sidebar
+	
+	include includes/_docs-sidebar.pug
+	
 	.docs-content
 		.container
 			article#liquido-user-guide.docs-article
@@ -131,9 +22,8 @@ body
 					ul
 						li The goal of LIQUIDO is to offer a free, secure and liquid eVoting plattform.
 						li LIQUIDO implements the modern electoral concept called Liquid Democracy with Proxy Voting (Delegative Democracy).
-						li It extends these concepts with some new additions, so that the whole voting process is completely automatic, without the need for a central authority.
+						li It extends these concepts, so that the whole voting process runs by itself, without the need for a central authority.
 						li And last but not least: Implementing LIQUIDO has been my personal hobby since more than four years now. I invested every last minute of my spare free time into it. I learned a lot from it.
-
 					p.
 						This User Guide is aimed at LIQUIDO users. Also beginners that are completely new to Liquid Democracy. It describes the LIQUIDO web application from an end user perspective.
 						Here the most basic concepts that LIQUIDO is built upon are introduced. Each section in this guide will walk you through the LIQUIDO voting process step by step.
@@ -174,7 +64,7 @@ body
 					h2.section-heading Main Navigation
 					p.
 						At the top of the LIQUIDO web application you can see four arrows: Ideas, Proposals, Polls and Laws. These arrows are the main navigation in LIQUIDO.
-						When you are logged in you can click on each arrow to navigate to the corresponding overview page. Yes the arrows do represent a process from left to right.
+						When you are logged in you can click on each arrow to navigate to the corresponding overview page.
 					p.
 						The magnifying glass leads to the search page.
 						Click on your avatar to navigate to your User Home. The drop down menu behind your username shows further links, e.g. to add an idea or set a proxy.
@@ -182,9 +72,11 @@ body
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow(src="images/screenshot-main-navigation.png")
 
+					p.
+						Each arrow leads to an overview page that shows a list of current Ideas, Proposals, Polls and Laws. And yes the arrows do represent a process from left to right.
 				
 
-			article.docs-article#process-details
+			article.docs-article#liquido-voting-process
 				header.docs-header
 					h1.docs-heading LIQUIDO Voting Process
 					section.docs-intro
@@ -219,8 +111,8 @@ body
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-add-idea.png")
 
-				section.docs-section#discuss-proposals
-					h2.section-heading Discuss proposals
+				section.docs-section#discuss-proposal
+					h2.section-heading Discuss proposal
 					p When an idea received enough support then it automatically becomes a proposal. A proposal can then be further discussed. Other users can add comments to proposals.
 					p When the creator of a proposal wants to put his proposal to the vote, then he can choose to either start a new poll or join an existing poll.
 					figure.figure.docs-figure.py-3
@@ -263,20 +155,20 @@ body
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-poll-in-voting.png")
 
-					p.
+					p#sort-proposals.
 						Click on the "Cast vote" button. On  the next page you can now sort the proposals into your prefferred order in your ballot. Simply drag proposals from the left 
 						to the right. And sort your most preferred proposal to the top. You do not necessarily need to vote for all proposals in the poll. When you are finished sorting click on the "Next" button.
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-sort-proposals.png")
 
-					p To finally cast your vote now two steps are necessary in LIQUIDO:
+					p#fetch-voter-token To finally cast your vote now two steps are necessary in LIQUIDO:
 					p.
 						First we fetch a <em>Voter Token</em> from the LIQUIDO backend. A voter token is the digital representation of your right to vote. With this token a ballot can be casted anonymously. 
 						The Voter Token is confidential! It must not be revealed!
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-cast-vote-start.png")
 
-					p When your ballot was counted successfully you will see this success message:
+					p#cast-vote-anonymously When your ballot was counted successfully you will see this success message:
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-cast-vote-success.png")
 
@@ -297,7 +189,37 @@ body
 							You may completely revoke your delegation to a proxy at any time. This way the tree of delegations is in a constant state of change - it's kind of <em>liquid.</em>
 				section.docs-section#assign-proxy
 					h2.section-heading Assign a proxy
-					p some asöfkljaskdfjl
+					p.
+						Click on your username at the top right in the navigation bar to open the user menu. From there you can configure your "Proxy Delegations". You can assign one procy per area.
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-user-menu.png")
+					p.
+						The proxy page shows information about your proxy and yourself as a proxy in each area. The top of part of each panel shows your currently assigned direct proxy in each area. If your direct proxy forwarded his right to vote to another parent proxy (and so on)
+						the top proxy at the end of this delegatin chain is shown. The bottom part of each panel shows information about you as a proxy in this area. If you are a public proxy and if there are any pending delegation requests.
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/scsreenshot-assigned-proxies.png")
+					p To edit your proxy in an area click on its avatar image. To assign a new proxy click on the "Assign proxy" placeholder. On the edit proxy page you can then select a new proxy.
+					p If a proxy is not a public proxy, then the delegation can only be requested. The proxy must still accept the delegation.
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/scsreenshot-edit-proxy.png")
+
+				section.docs-section#delegatin-requests
+					h2.section-heading Delegation requests
+					p When another voter wants to assign you as his proxy, then you will receive a delegation request. You may choose to accept these delegation requests per area on the proxy page.
+					.callout-block.callout-block-info
+						.content
+							h4.callout-title Note about delegation requests
+							p.
+								There is one little detail about proxy voting you might want to consider. When you accept delegation requests, and this become a proxy, then your vote will also create ballots for all your delegees.
+								As a logical consequence your delegees will know <em>how</em> you voted, because you also voted for them. Your vote is not completely private anymore.
+								But only your delegees will be able to see how you voted. No one else!
+							p.
+								If you don't want that you simply dont't need to accept any delegation requests. Then your vote will stay completely private and secret. But of course then it will only count one time.
+					
+					h2.section-heading#public-proxy Become a public proxy
+					p.
+						When you want to collect as many delegations as possible, you can decide to become a <em>public proxy.</em> Your username will internally be stored with your right to vote, so that other users
+						can immideately delegate their right to vote to you. You will not need to accept delegation requests anymore. They will be accepted automatically.
 
 			article.docs-article#domain-model
 				header.docs-header

@@ -57,10 +57,31 @@ $theme-colors: (
   "info": $theme-info-color,
 );
 
+/*************************** Custom SCSS for LIQUIDO ****************************/
+
+#docs-nav {
+	li.section-title {
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+	.nav-link {
+		padding-top: 0.3rem;
+		padding-bottom: 0.3rem;
+	}
+	.nav-link:before {
+		width: 7px;
+	}
+} 
+
+
+
+
 /*************************** Import Bootstrap  *****************************/
 @import "bootstrap/scss/bootstrap.scss";
 
 
 /*************************** Theme Styles Section ****************************/
 @import "theme/_styles.scss"
+
+
 

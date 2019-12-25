@@ -79,6 +79,7 @@ gulp.task('watch', ['sass', 'js', 'html', 'images', 'pug'], function () {
 	gulp.watch(pugSources, ['pug']);
 	gulp.watch(pugIncludes, ['pug']);
 	gulp.watch(imgSources, ['images'])
+	gulp.watch(sassSources, ['sass'])
 	//gulp.watch(htmlSources, ['html']);
 });
 
