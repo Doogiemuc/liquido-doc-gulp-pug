@@ -15,38 +15,35 @@ body
 		nav#docs-nav.docs-nav.navbar
 			ul.section-items.list-unstyled.nav.flex-column.pb-3
 				li.nav-item.section-title
-					a.nav-link.scrollto.active(href='#section-1')
+					a.nav-link.scrollto.active(href='#liquido-user-guide')
 						span.theme-icon-holder.mr-2
 							i.fas.fa-map-signs
-						| Introduction
+						| Liquido User Guide
 				li.nav-item
-					a.nav-link.scrollto(href='#item-1-1') Section Item 1.1
+					a.nav-link.scrollto(href='#what-is-liquido') What is Liquido?
 				li.nav-item
-					a.nav-link.scrollto(href='#item-1-2') Section Item 1.2
+					a.nav-link.scrollto(href='#liquido-voting-process') Liquido Voting Process
 				li.nav-item
-					a.nav-link.scrollto(href='#item-1-3') Section Item 1.3
+					a.nav-link.scrollto(href='#register-login') Register & Login
 				li.nav-item
-					a.nav-link.scrollto(href='#item-1-4') Section Item 1.4
-				li.nav-item
-					a.nav-link.scrollto(href='#item-1-5') Section Item 1.5
-				li.nav-item
-					a.nav-link.scrollto(href='#item-1-6') Section Item 1.6
+
+
 				li.nav-item.section-title.mt-3
 					a.nav-link.scrollto(href='#section-2')
 						span.theme-icon-holder.mr-2
 							i.fas.fa-arrow-down
-						| Installation
+						| Liquido Domain Objects
 				li.nav-item
-					a.nav-link.scrollto(href='#item-2-1') Section Item 2.1
+					a.nav-link.scrollto(href='#item-2-1') Ideas
 				li.nav-item
-					a.nav-link.scrollto(href='#item-2-2') Section Item 2.2
+					a.nav-link.scrollto(href='#item-2-2') Proposals
 				li.nav-item
-					a.nav-link.scrollto(href='#item-2-3') Section Item 2.3
+					a.nav-link.scrollto(href='#item-2-3') Polls
 				li.nav-item.section-title.mt-3
 					a.nav-link.scrollto(href='#section-3')
 						span.theme-icon-holder.mr-2
 							i.fas.fa-box
-						| APIs
+						| Cast vote
 				li.nav-item
 					a.nav-link.scrollto(href='#item-3-1') Section Item 3.1
 				li.nav-item
@@ -123,46 +120,216 @@ body
 	// //docs-sidebar
 	.docs-content
 		.container
-			article#section-1.docs-article
+			article#liquido-user-guide.docs-article
 				header.docs-header
 					h1.docs-heading
-						| Introduction 
-						span.docs-time Last updated: 2019-06-01
+						| Liquido User Guide
+						span.docs-time Last updated: 2019-12-30
 					
-				section
-					h2.section-heading What is Liquido?
-					p Liquido is many things ...
+				section.docs-section#what-is-liquido
+					h2.section-heading What is LIQUIDO?
 					ul
-						li Liquido is a web based eVoting application.
-						li It implements the modern election concecpt called Liquid Democracy.
-						li It also implements Proxy Voting, a modern form of Direct Democracy.
-						li It extends these concepts with some new additions to the voting process.
-						li It is an open source software project.
-						li And last but not least: Liquido has been my hobby since more than four years. I invested every last minute of my free time into it. And had a lot of fun doing it.
+						li The goal of LIQUIDO is to offer a free, secure and liquid eVoting plattform.
+						li LIQUIDO implements the modern electoral concept called Liquid Democracy with Proxy Voting (Delegative Democracy).
+						li It extends these concepts with some new additions, so that the whole voting process is completely automatic, without the need for a central authority.
+						li And last but not least: Implementing LIQUIDO has been my personal hobby since more than four years now. I invested every last minute of my spare free time into it. I learned a lot from it.
 
-					h2 Liquido Voting Process
 					p.
-						The goal of liquido is to create a free, secure and liquid eVoting platform that does not need a central authority. The whole voting process should be automatic.
-						We archived this goal by implementing a new aproach to liquid democracy, where voters themselves drive the whole process.
+						This User Guide is aimed at LIQUIDO users. Also beginners that are completely new to Liquid Democracy. It describes the LIQUIDO web application from an end user perspective.
+						Here the most basic concepts that LIQUIDO is built upon are introduced. Each section in this guide will walk you through the LIQUIDO voting process step by step.
+					p.
+						This User Guide describes <em>how</em> the LIQUIDO web application works. 
+						If you want to know more about <em>why</em> LIQUIDO works the way it does, then you can find a more in depth discourse in the <a href="/liquido-thesis.html">LIQUIDO Thesis</a>.
+					p.
+						If you want to host your own instance of the LIQUIDO, then the <a href="liquido-tech.html">technical administration handbook</a> will help you set things up.
 
-					img.border.p-3.my-3(src="images/Flowchart.png")
+				section.docs-section#register-login
+					h2.section-heading Register & Login
+					p Navigate to LIQUIDO with your browser. Click on the "Register" button at the bottom of the LIQUIDO start page to register as a new user. If you already have registered before you can login at the top right.
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow(src="images/screenshot-liquido-home.png")
 
-					p Everything starts with an idea. In LIQUIDO anyone my suggest his idea. An idea can be liked. When an idea receives enough support, then it becomes a proposal.
+					h4 Register as a new user
+					figure
+						img(src="images/screenshot-register.png")
+						figcaption.figure-caption
+							i.fas.fa-info-circle.mr-2
+							| Name, email and mobilephone are mandatory. Choose any avatar you like. Website is optional.
+
+					p After you have registered you are automatically forwarded to the login page. There are two ways to login to LIQUIDO. You can either login via your email or you can login via your mobilephone.
+
+					h4 Login via Email
 					p.
-						The creator of the idea can then start a new poll. Other ideas that have reached their quorum and became a proposal can now join this poll. But they
-						must have reached their quorum.
+						Enter your email adress and click the "Send login link" button. Then a magic login link will be sent to your email account. Simply click on the link in
+						the received email and you will be logged in. Keep in mind, that the magic link in the email is only valid for a limit amount of time. After that you have to login again.
+					img(src="images/screenshot-login-via-email.png")
+					
+					h4 Login via SMS
 					p.
-						The elaboration phase runs for a defined amount of time, e.g. two weeks. During this phase the proposals in the poll can be discussed. Each creator of a 
-						proposal can (and should) update his proposal according to this discussion.
-						When the elaboration phase is finished, then the voting phase starts. Then voters can cast their vote in this poll.
+						Or alternatively you can login via SMS. Enter your mobile phone number and click the "Send login token" button. A 6 digit one time login token will be sent
+						to your mobilephone via SMS. Enter that 6-digit number in the 6 fields that are then shown. The SMS login token is only valid once!
+					img(src="images/screenshot-login-via-sms.png")
+					
+				section.docs-section#main-navigation
+					h2.section-heading Main Navigation
 					p.
-						In LIQUIDO you as a voters don't just vote for or against a proposal, but instead you sort the proposals into your preferred order. You do not have to vote for
-						all proposals. Just the ones that you chose. In your preferred order. 
+						At the top of the LIQUIDO web application you can see four arrows: Ideas, Proposals, Polls and Laws. These arrows are the main navigation in LIQUIDO.
+						When you are logged in you can click on each arrow to navigate to the corresponding overview page. Yes the arrows do represent a process from left to right.
 					p.
-						LIQUIDO then selects the winning proposal of the poll with the well researched <a href="https://en.wikipedia.org/wiki/Ranked_pairs">Ranked Pairs</a> electoral system.
+						The magnifying glass leads to the search page.
+						Click on your avatar to navigate to your User Home. The drop down menu behind your username shows further links, e.g. to add an idea or set a proxy.
+						
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow(src="images/screenshot-main-navigation.png")
+
 				
 
-				section.docs-intro
+			article.docs-article#process-details
+				header.docs-header
+					h1.docs-heading LIQUIDO Voting Process
+					section.docs-intro
+						p.
+							The goal of LIQUIDO is to offer a free, secure and liquid eVoting platform that does not need a central authority. The whole voting process should be automatic.
+							We archived this goal by implementing a new approach to liquid democracy, where voters themselves drive the whole process. This section will give you a first
+							overview of the voting process in LIQUIDO. We will go into more details of each step in the following chapters.
+						figure.figure.docs-figure.py-3
+							img.figure-img.img-fluid.border.shadow(src="images/Flowchart.png")
+						p Everything starts with an idea. In LIQUIDO anyone my suggest his idea. An idea can be liked. When an idea receives enough support, then it becomes a proposal.
+						p.
+							The creator of the idea can then start a new poll. Other ideas that have reached their quorum and became a proposal can now join this poll. But they
+							must have reached their quorum.
+						p.
+							The elaboration phase runs for a defined amount of time, e.g. two weeks. During this phase the proposals in the poll can be discussed. Each creator of a 
+							proposal can (and should) update his proposal according to this discussion.
+							When the elaboration phase is finished, then the voting phase starts. Then voters can cast their vote in this poll.
+						p.
+							In LIQUIDO you as a voters don't just vote for or against a proposal, but instead you sort the proposals into your preferred order. You do not have to vote for
+							all proposals. Just the ones that you chose. In your preferred order. 
+						p.
+							LIQUIDO then selects the winning proposal of the poll with the well researched <a href="https://en.wikipedia.org/wiki/Ranked_pairs">Ranked Pairs</a> electoral system.
+
+				section.docs-section#add-idea
+					h2.section-heading Add an idea
+					p.
+						Everything starts with an idea. An idea might be any suggestion for improvement. When someone suggests an idea, then he looks for support 
+						for his idea. Other LIQUIDO users can like and idea and thus support it. 
+					p.
+						Every idea is created in an area. An area can by a category, a department or a topic. This depends on what you are using LIQUIDO for. For example if you are a small group of people in a social club,
+						then your areas might be "finance", "spokesman" and "events". If you are a school class, then your areas might be "timetable", "excursions" and "canteen".
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-add-idea.png")
+
+				section.docs-section#discuss-proposals
+					h2.section-heading Discuss proposals
+					p When an idea received enough support then it automatically becomes a proposal. A proposal can then be further discussed. Other users can add comments to proposals.
+					p When the creator of a proposal wants to put his proposal to the vote, then he can choose to either start a new poll or join an existing poll.
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-proposal-in-elaboration.png")
+					
+				section.docs-section#start-join-poll
+					h2.section-heading Start or join a poll
+					h4 Start a new poll
+					p.
+						The very first proposal must of course start a new poll. Further proposals in the same area can then join this poll and suggest other possible alternatives.
+					p.
+						When a new poll is created, then it is in its elaboration phase. Furhter alternative proposals can join. All proposals in the poll can still be discussed.
+						The authors of the proposals should pay close attention to the comments on their proposal. Ideally, they will adapt their proposal accordingly, so that their
+						proposal might then receive the highest support in the coming voting phase.
+					h4 Join an existing poll
+					p.
+						When there already is a poll (in the same area than the proposal) that is still in elaboration phase, 
+						then the creator of the proposal can decide to join this already existing poll. He should do so if the poll is about the same topic.
+						This way his proposal will be put to the vote faster. All proposal in a poll must always be in the same area!
+					h4 Show poll details
+					p.
+						A poll consists of an unsorted set of proposals that joined the poll. A poll runs through phases: ELABORATION, VOTING and then FINISHED.
+						When the poll is initially created it consists of only one proposals. At least one more alternative proposal must join, before the voting phase can start.
+						During the elaboration phase all proposals in the poll can still be discussed, commented on and be improved by their creators.
+					p When voting starts, then the proposals in this poll cannot be changed anymore. Voters can then cast their vote.
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-poll-in-elaboration.png")
+					
+				
+				section.docs-section#cast-vote
+					h2.section-heading Cast a vote
+					p.
+						In LIQUIDO you don't just vote for or against one proposal. Instead you sort proposals of a poll into your personally preferred order. You do not necessarily need to vote
+						for all proposals in a poll. Simply pick the ones you want to vote for. Sort them into your preferred order in your ballot.
+					p The Polls page shows polls that are currently open for voting in the right column:
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow(src="images/screenshot-polls-in-voting.png")
+
+					p Click on one of those polls from the right column to show its details. As you can see, this poll is in its voting phase:
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-poll-in-voting.png")
+
+					p.
+						Click on the "Cast vote" button. On  the next page you can now sort the proposals into your prefferred order in your ballot. Simply drag proposals from the left 
+						to the right. And sort your most preferred proposal to the top. You do not necessarily need to vote for all proposals in the poll. When you are finished sorting click on the "Next" button.
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-sort-proposals.png")
+
+					p To finally cast your vote now two steps are necessary in LIQUIDO:
+					p.
+						First we fetch a <em>Voter Token</em> from the LIQUIDO backend. A voter token is the digital representation of your right to vote. With this token a ballot can be casted anonymously. 
+						The Voter Token is confidential! It must not be revealed!
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-cast-vote-start.png")
+
+					p When your ballot was counted successfully you will see this success message:
+					figure.figure.docs-figure.py-3
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-cast-vote-success.png")
+
+					p In this example the voter was also a proxy for 8 other voters. So his vote counted that many times.
+
+			article.docs-article#proxy-voting
+				header.docs-header
+					h1.docs-heading Proxy Voting
+					section.docs-intro
+						p.
+							In most democratic countries' current political system voters delegate their voting power to an elected parliament. This institution is elected for a fixed
+							amount of time. During that time they pretty much can do what they want and you as a voter have no possibility whatsoever to prevent that. In LIQUIDO this is different.
+						p.
+							In Liquid Democracy it is possible to delegate one's right to vote to a proxy. But this delegation can be retracted at any time. And it is <strong>always</strong> possible to
+							vote for yourself. Even if your assigned proxy has already casted a ballot for you (as long as a poll is still in its voting phase.) And the vote of a proxy will <strong>never</strong> overrule a ballot casted by yourself.
+						p.
+							A proxy may in turn delegate all his collected rights to vote to another parent proxy. This way a tree of proxies evolves where the voting power culminates at the top. You can see who is your proxy at the top of this chain.
+							You may completely revoke your delegation to a proxy at any time. This way the tree of delegations is in a constant state of change - it's kind of <em>liquid.</em>
+				section.docs-section#assign-proxy
+					h2.section-heading Assign a proxy
+					p some asöfkljaskdfjl
+
+			article.docs-article#domain-model
+				header.docs-header
+					h1.docs-heading LIQUIDO Domain Model
+					section.docs-intro
+						p Domain objects ...asfdl akjsfd lak ds
+			
+
+				section.docs-section#ideas
+					h2.section-heading Ideas
+
+					h2.section-heading Areas
+					
+					h2.section-heading Proposals
+					p When an idea receives enough support, then it becomes a proposal. A proposal can be further discussed. Other users can add comments below a proposal.
+					p When the creator of a proposal wants to put his proposal to the vote, then he can choose to either start a new poll with his proposal or to join an existing poll.
+					
+					h2.section-heading Polls
+					
+
+					h2.section-heading Ballots
+					p.
+						When you cast your vote in LIQUIDO you do not simply vote for or against one proposal. Instead you sort proposals into your personally preferred order 
+
+					h2.section-heading Proxy Delegations
+
+					h2.section-heading 
+					
+					
+
+
+				section.docs-section
 					h2 Next Section
 					p
 						| Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.

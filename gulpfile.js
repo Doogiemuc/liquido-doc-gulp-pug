@@ -11,8 +11,7 @@ var gulp = require('gulp'),
 
 var options = { indentSize: 2 };
 
-var coffeeSources = ['scripts/hello.coffee'],
-	pugSources = ['pug/**/!(_)*.pug'],
+var pugSources = ['pug/**/!(_)*.pug'],
 	pugIncludes = ['pug/includes/**/*.pug'],
 	jsSources = ['assets/**/*.js'],
 	imgSources = ['assets/**/*.jpg', 'assets/**/*.png'],
@@ -29,13 +28,6 @@ gulp.task('connect', function () {
 		root: 'dist'
 	});
 });
-
-/*  not necessary
-gulp.task('copy', function() {
-	gulp.src('index.html')
-	.pipe(gulp.dest(outputDir))
-});
-*/
 
 gulp.task('html', function() {
 	gulp.src(htmlSources)
@@ -86,6 +78,7 @@ gulp.task('watch', ['sass', 'js', 'html', 'images', 'pug'], function () {
 	gulp.watch(sassSources, ['sass']);
 	gulp.watch(pugSources, ['pug']);
 	gulp.watch(pugIncludes, ['pug']);
+	gulp.watch(imgSources, ['images'])
 	//gulp.watch(htmlSources, ['html']);
 });
 
