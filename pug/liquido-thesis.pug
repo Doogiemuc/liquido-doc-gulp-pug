@@ -1,0 +1,149 @@
+doctype html
+head
+	include includes/_html-head.pug
+	title LIQUIDO Documentation
+body
+	include includes/_fixed-nav.pug
+
+.docs-wrapper
+	
+	include includes/_docs-sidebar.pug
+	
+	.docs-content
+		.container
+			article#liquido-user-guide.docs-article
+				header.docs-header
+					h1.docs-heading
+						span.header-icon-holder
+							i.fas.fa-flask
+						| Liquido Thesis
+						span.docs-time Last updated: 2019-12-30
+					
+				section.docs-section#how-does-liquido-work
+					h2.section-heading How does LIQUIDO work?
+					p.
+						This thesis is a more in depth discourse about the philophical backround of Liquid Democracy. LIQUIDO it is an implementation of Liquid Democracy
+						with Proxy Voting and some new extions to this great electoral concept.
+					
+					
+				section.docs-section#liquid-democracy
+					h2.section-heading Democracy
+					blockquote
+						| (Greek: δημοκρατία dēmokratía, literally "rule by people") is a form of government in which the people have the authority to choose their governing legislature.
+						| Generally there are two types of democracy, direct or representative. In a direct democracy, the people directly deliberate and decide on legislature.
+						| In a representative democracy the people elect representatives to deliberate and decide on legislature, such as in parliamentary or presidential democracy. Combining those basic types is done in liquid democracy.
+						footer.blockquote-footer
+							a(href="https://en.wikipedia.org/wiki/Democracy" target="_blank") https://en.wikipedia.org/wiki/Democracy
+					p.
+						In its original form in ancient greek, the people (actually only men at that time) gathered together in one place and discussed current political topics. Unfortunately, this only works up to a certain number of people.
+						In a larger state with thousands of citizens it is not feasible to discussing everything with everybody. The next best way of involving every citizen in political decisions is:
+						
+					h2.section-heading Direct Democacy 
+					blockquote
+						| Direct democracy or pure democracy is a form of democracy in which people decide on policy initiatives directly. [...] In direct democracy, people decide on policies without any intermediary.
+						footer.blockquote-footer
+							a(href="https://en.wikipedia.org/wiki/Direct_democracy" target="_blank") https://en.wikipedia.org/wiki/Direct_democracy
+					p.
+						Direct democracy only works when the majority of citizens takes part in polls. Otherwise small minorites might decide a vote to their advantage. And direct democracy also assumes
+						that every citizen is able to take an informed decision on his own. This can be complex. Not everybody can be an expert in every topic. Therefore the idea was born
+						to elect representatives:
+
+					h2.section-heading Representative Democracy
+					blockquote
+						| Representative democracy (also indirect democracy, representative government or psephocracy) is a type of democracy founded on the principle of elected officials representing a group of people, 
+						| as opposed to direct democracy. Nearly all modern Western-style democracies are types of representative democracies.
+						footer.blockquote-footer
+							a(href="https://en.wikipedia.org/wiki/Representative_democracy" target="_blank") https://en.wikipedia.org/wiki/Representative_democracy
+					p.
+						Representative democracy may be called "the best electoral system we invented so far". To say the least, it has granted us six decades of peace without any larger wars in Europe.
+						But it does have some known disadvantages such as party fragementation and as a consequence the lack of clear majorities which ultimatively leads to the inability to take political decisions.
+					p.
+						In a parliamentary democracy voters elect representatives for a given amount of time called a session, most commonly for some years. The parliament then decides on new laws.
+						During this time, citizens have virtually no influence on political decisions. The press does have some power as a controlling body as it can investigate and publish political crimes.
+						But the individual has not.
+					p.
+						So, what could be the best middle ground between direct and representative democracy that combines the advantages of both electora systems? 
+						
+
+					h2.section-heading Liquid Democracy
+					blockquote
+						| Liquid Democracy (also known as delegative democracy) is a form of democracy whereby an electorate has the option of vesting voting power in delegates rather than voting directly themselves.
+						| Voters can either vote directly or delegate their vote to other participants; voters may also select different delegates for different issues.
+						footer.blockquote-footer
+							a(href="https://en.wikipedia.org/wiki/Liquid_democracy" target="_blank") https://en.wikipedia.org/wiki/Liquid_democracy
+					.alert.alert-info 
+						i.fas.fa-arrow-alt-circle-right.fa-2x.float-left.mr-2
+						| In Liquid Democracy a voter can always vote for himself no matter whether he currently has delegated his voting power to a proxy or not. And a delegation to a proxy may be revoked at any time.
+					p.
+						The concept of delegating one's right to vote to a "proxy" might seem contrived at first. But actually this is nothing else than what voter do in a representative democracy.
+						The parlamentarian votes for the citizens.
+					p.
+						Political parties can also be represented in this system. The head of the party is just simply a proxy for everyone that want's to elect this party. The difference
+						in Liquid Democracy is, that this election, the delegation of ones voting power to this political party, can be revoked (and then possible re-assigned to another party) at any time.
+					
+
+			article.docs-article#proxy-voting
+				header.docs-header
+					h1.docs-heading 
+						span.header-icon-holder
+							i.fas.fa-share-square
+						| Proxy Voting
+					section.docs-intro
+						p A proxy may in turn delegate all his collected rights to vote to another parent proxy. This way a tree of proxies evolves where the voting power culminates at the top. You can always see who is your effective proxy at the top of this chain.
+						p In Liquido you as a voter may always cast a vote on your own, also when a proxy is assigned. You can even overrule an already casted vote of your proxy in a poll (as long as the poll is still in its voting phase). The vote of a proxy will never overrule an already casted vote by you. And you may completely revoke your delegation to a proxy at any time.
+						p This way the tree of delegations is in a constant state of change - it's kind of liquid.
+					
+			article.docs-article#liquido-voting-process
+				header.docs-header
+					h1.docs-heading 
+						span.header-icon-holder
+							i.fas.fa-angle-double-right
+						| LIQUIDO Voting Process
+					section.docs-intro
+						p.
+							The goal of LIQUIDO is to offer a free, secure and liquid eVoting platform that does not need a central authority. The whole voting process should be automatic.
+							We archived this goal by implementing a new approach to liquid democracy, where voters themselves drive the whole process. This section will give you a first
+							overview of the voting process in LIQUIDO. We will go into more details of each step in the following chapters.
+						figure.figure.docs-figure.py-3
+							img.figure-img.img-fluid.border.shadow(src="images/Flowchart.png")
+						p Everything starts with an idea. In LIQUIDO anyone my suggest his idea. An idea can be liked. When an idea receives enough support, then it becomes a proposal.
+						p.
+							The creator of the idea can then start a new poll. Other ideas that have reached their quorum and became a proposal can now join this poll. But they
+							must have reached their quorum.
+						p.
+							The elaboration phase runs for a defined amount of time, e.g. two weeks. During this phase the proposals in the poll can be discussed. Each creator of a 
+							proposal can (and should) update his proposal according to this discussion.
+							When the elaboration phase is finished, then the voting phase starts. Then voters can cast their vote in this poll.
+						p.
+							In LIQUIDO you as a voters don't just vote for or against a proposal, but instead you sort the proposals into your preferred order. You do not have to vote for
+							all proposals. Just the ones that you chose. In your preferred order. 
+						p.
+							LIQUIDO then selects the winning proposal of the poll with the well researched <a href="https://en.wikipedia.org/wiki/Ranked_pairs">Ranked Pairs</a> electoral system.
+					hr
+					h2.section-header#further-readings
+					p.
+						This is the end of the LIQUIDO User Guide. This guide is aimed at LIQUIDO users. It describes <em>HOW</em> the LIQUIDO web app works. If you wont to know more details about
+						<em>WHY</em> LIQUIDO works the way it does, then you can find a more in depth discourse in the <a href="/liquido-thesis.html">LIQUIDO Thesis</a>.
+					p.
+						If you want to host your own instance of the LIQUIDO, then the <a href="liquido-tech.html">technical administration handbook</a> will help you set things up.
+
+			footer.footer
+				.container.text-right.py-5
+					hr
+					<!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+					small.copyright
+						a.theme-link(href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-4-documentation-template-for-software-projects/" target="_blank") Layout template
+						| 
+						span designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley (3rd Wave Media)</a> for developers
+
+
+// Javascript
+script(src='assets/plugins/jquery-3.4.1.min.js')
+script(src='assets/plugins/popper.min.js')
+script(src='assets/plugins/bootstrap/js/bootstrap.min.js')
+// Page Specific JS
+script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js')
+script(src='assets/js/highlight-custom.js')
+script(src='assets/plugins/jquery.scrollTo.min.js')
+script(src='assets/plugins/lightbox/dist/ekko-lightbox.min.js')
+script(src='assets/js/docs.js')

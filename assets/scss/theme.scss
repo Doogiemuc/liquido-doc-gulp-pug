@@ -71,9 +71,39 @@ $theme-colors: (
 	.nav-link:before {
 		width: 7px;
 	}
-} 
+}
+.docs-article {
+	.header-icon-holder {
+		display: inline-block;
+		background: #28b76b;
+		color: white;
+		width: 3rem;
+		height: 3rem;
+		font-size: 2rem;
+		padding-top: 5px;
+		text-align: center;
+		border-radius: 50%;
+		margin-right: 0.2em;
+	}
+}
 
+blockquote {
+	border-left: 2px solid $gray-600;
+	padding-left: 0.5em;
+	font-style: italic;
+	margin-bottom: 0;   // our blockquotes have a <footer>
+}
 
+blockquote::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.blockquote-footer {
+	float: right;
+	font-style: normal;
+}
 
 
 /*************************** Import Bootstrap  *****************************/

@@ -17,50 +17,91 @@ body
 						.card-body
 							h5.card-title.mb-3
 								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-university
+									i.fas.fa-map-signs
 								span.card-title-text User Guide
 							.card-text
 								section
-								| Step by step guide for liquido users. This is also targetet to beginners. Here we introduce the most basic concepts behind Liquido.
-								| You will learn what an idea, a proposal and a poll is.
-							a.card-link-mask(href="liquido-doc.html#section-1")
+								| Step by step guide for liquido users. This is also targetet to beginners. Here we explain what LIQUIDO is and introduce the most basic concepts that drive LIQUIDO.
+							a.card-link-mask(href="liquido-doc.html#liquido-user-guide")
 
 				.col-12.col-lg-4.py-3
 					.card.shadow-sm
 						.card-body
 							h5.card-title.mb-3
 								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-university
-								span.card-title-text Liquido Voting Process
+									i.fas.fa-angle-double-right
+								span.card-title-text Voting Process
 							.card-text
 								section
-								| The asdf lökjasdf kj adfsg jdsaökg aöldksjglakjg lkad sg
-							a.card-link-mask(href="liquido-doc.html#section-1")
+								| This section of the user guide will give you a first overview of the voting process in LIQUIDO. The following sections will dive into more detail.
+							a.card-link-mask(href="liquido-doc.html#liquido-voting-process")
 
 				.col-12.col-lg-4.py-3
 					.card.shadow-sm
 						.card-body
 							h5.card-title.mb-3
 								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-university
-								span.card-title-text Idea
+									i.fas.fa-vote-yea
+								span.card-title-text Cast a vote
 							.card-text
 								section
-								| Everyone can add his idea. Ideas can be liked. When an idea receives
-								| enough support, then it becomes a proposal. 
-							a.card-link-mask(href="liquido-doc.html#section-2")
+								| In LIQUIDO you don't just vote for or against one proposal. Instead you sort proposals of a poll into your personally preferred order. 
+							a.card-link-mask(href="liquido-doc.html#cast-vote")
 
 				.col-12.col-lg-4.py-3
 					.card.shadow-sm
 						.card-body
 							h5.card-title.mb-3
 								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-university
-								span.card-title-text Proposal
+									i.fas.fa-share-square
+								span.card-title-text Proxy Voting
 							.card-text
 								section
-								| A proposal can be discussed. The creator of the proposal can either
-								| create a new poll or join an existing poll.
-							a.card-link-mask(href="liquido-doc.html#section-3")
+								| In Liquid Democracy it is possible to delegate one's right to vote to a proxy. 
+								| A proxy may in turn delegate all his collected rights to vote to another parent proxy. This way a tree of proxies evolves.
+							a.card-link-mask(href="liquido-doc.html#proxy-voting")
+
+				.col-12.col-lg-4.py-3
+					.card.shadow-sm
+						.card-body
+							h5.card-title.mb-3
+								span.theme-icon-holder.card-icon-holder.mr-2
+									i.fas.fa-project-diagram
+								span.card-title-text Domain Model
+							.card-text
+								section
+								| This section describes the LIQUIDO domain objects in more detail: Ideas, Areas, Proposals, Polls, RightToVote, Ballots and Proxy Delegations.
+							a.card-link-mask(href="liquido-doc.html#proxy-voting")
+
+
+				
+				.w-100
+
+				.col-12.col-lg-4.py-3
+					.card.shadow-sm
+						.card-body
+							h5.card-title.mb-3
+								span.theme-icon-holder.card-icon-holder.mr-2
+									i.fas.fa-flask
+								span.card-title-text LIQUIDO Thesis
+							.card-text
+								section
+								| The thesis is a more in depth discourse about the philophical backround of Liquid Democracy. IT describe the theory behind
+								| Liquid Democracy. And it explains <em>WHY</em> LIQUIDO works the way it does.
+							a.card-link-mask(href="liquido-thesis.html")
+
+
+				.col-12.col-lg-4.py-3
+					.card.shadow-sm
+						.card-body
+							h5.card-title.mb-3
+								span.theme-icon-holder.card-icon-holder.mr-2
+									i.fas.fa-cogs
+								span.card-title-text Technical Docs
+							.card-text
+								section
+								| Details of the open source LIQUIDO front end, the web application implemented with VueJS and node. And the LIQUIDO backend, a three tier Sprint-Boot server written in java.
+								| This documentation is aimed at developers and administrator who want to host their own instance of LIQUIDO.
+							a.card-link-mask(href="liquido-thesis.html")
 
 include includes/_footer.pug
