@@ -1,3 +1,7 @@
+# generated output files
+dist
+_site
+
 # Logs
 logs
 *.log

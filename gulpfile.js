@@ -1,86 +1,149 @@
-var gulp = require('gulp'),
-	sass = require('gulp-sass'),
-//	rename = require('gulp-rename'),
-	uglify = require('gulp-uglify'),
-	concat = require('gulp-concat'),
-	sourcemaps = require('gulp-sourcemaps'),
-	prefix = require('gulp-autoprefixer'),
-	htmlbeautify = require('gulp-html-beautify'),
-	connect = require('gulp-connect'),
-	pug = require('gulp-pug');
+"use strict";
 
-var options = { indentSize: 2 };
+// Load plugins
+const autoprefixer = require("autoprefixer");
+const browsersync = require("browser-sync").create();
+// const cp = require("child_process");
+const cssnano = require("cssnano");
+const del = require("del");
+//const eslint = require("gulp-eslint");
+const gulp = require("gulp");
+const imagemin = require("gulp-imagemin");
+const newer = require("gulp-newer");
+const plumber = require("gulp-plumber");
+const postcss = require("gulp-postcss");
+const rename = require("gulp-rename");
+const sass = require("gulp-sass");
+const pug = require('gulp-pug');
 
-var pugSources = ['pug/**/!(_)*.pug'],
-	pugIncludes = ['pug/includes/**/*.pug'],
-	jsSources = ['assets/**/*.js'],
-	imgSources = ['assets/**/*.jpg', 'assets/**/*.png'],
-	sassSources = ['assets/scss/**/*.scss'],
-	htmlSources = ['**/*.html', '!node_modules/**'],
-	dist = 'dist';
+// Custom directory structure of your project
+const
+	pugSource   = "./pug/**/!(_)*.pug",
+	pugIncludes = "./pug/includes/**/*.pug",
+	jsSource    = "./assets/**/*.js",
+	jsDest      = "./_site/assets/",
+	imgSource   = "./assets/images/**/*",
+	imgDest     = "./_site/images",
+	scssSources = "./assets/scss/**/*.scss",
+	scssDest    = "./_site/css/",
+	htmlSource  = "./html/**/*.html",
+	site = "./_site/"
 
-//Local server
-gulp.task('connect', function () {
-	connect.server({
-		host: 'localhost',
-		port: 7000,
-		livereload: true,
-		root: 'dist'
-	});
-});
+// BrowserSync
+function browserSync(done) {
+  browsersync.init({
+    server: {
+      baseDir: site
+    },
+    port: 7000
+  });
+  done();
+}
 
-gulp.task('html', function() {
-	gulp.src(htmlSources)
-		.pipe(gulp.dest(dist))
-		.pipe(connect.reload())
-});
+// BrowserSync Reload
+function browserSyncReload(done) {
+  browsersync.reload();
+  done();
+}
 
-gulp.task('js', function() {
-	gulp.src(jsSources)
-		.pipe(sourcemaps.init())
-//		.pipe(uglify())
-//		.pipe(concat('script.js'))
-		.pipe(sourcemaps.write(''))
-		.pipe(gulp.dest('dist/assets'))
-		.pipe(connect.reload())
-});
+// Clean assets
+function clean() {
+  return del(["./_site/assets/"]);
+}
 
-gulp.task('images', function () {
-	gulp.src(imgSources)
-		.pipe(gulp.dest(dist))
-});
+// Optimize Images
+function images() {
+  return gulp
+    .src(imgSource)
+    .pipe(newer(imgDest))
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [
+            {
+              removeViewBox: false,
+              collapseGroups: true
+            }
+          ]
+        })
+      ])
+    )
+    .pipe(gulp.dest(imgDest));
+}
 
+// CSS task
+function css() {
+  return gulp
+    .src(scssSources)
+    .pipe(plumber())
+    .pipe(sass({ outputStyle: "expanded" }))
+    .pipe(gulp.dest(scssDest))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(gulp.dest(scssDest))
+    .pipe(browsersync.stream());
+}
 
-gulp.task('pug', function () {
-	gulp.src(pugSources)
+/*
+// Lint scripts
+function scriptsLint() {
+  return gulp
+    .src([jsSource, "./gulpfile.js"])
+    .pipe(plumber())
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+}
+*/
+
+// Transpile, concatenate and minify scripts
+function scripts() {
+  return gulp
+	.src(jsSource)
+	//.pipe(plumber())
+	.pipe(gulp.dest(jsDest))
+	.pipe(browsersync.stream())
+}
+
+// Render pug files to HTML
+function renderPug() {
+	return gulp.src(pugSource)
 		.pipe(pug())
-		.pipe(htmlbeautify(options))
-		.pipe(gulp.dest(dist))
-		.pipe(connect.reload())
-});
+		//.pipe(htmlbeautify(options))
+		.pipe(gulp.dest(site))
+		//.pipe(browserSync.stream())
+}
 
-//sass compiler
-gulp.task('sass', function () {
-	return gulp.src(sassSources)
-		.pipe(sourcemaps.init())
-		.pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-		.pipe(prefix({
-			browsers: ['> 1%', 'IE 9'],
-			cascade: false
-		}))
-		.pipe(sourcemaps.write(''))
-		.pipe(gulp.dest('dist/assets/css'));
-});
+// define complex tasks
+//const jsLint = gulp.series(scriptsLint, scripts);
+const build  = gulp.series(clean, gulp.parallel(renderPug, css, images, scripts));
+const watch  = gulp.parallel(watchFiles, browserSync);
 
+// Watch files
+function watchFiles() {
+  gulp.watch(scssSources, css);
+  gulp.watch(jsSource, scripts);
+  gulp.watch(pugSource, gulp.series(renderPug, browserSyncReload))
+  /*
+  gulp.watch(
+    [
+      pugSource,
+	  htmlSource
+    ],
+    gulp.series(build, browserSyncReload)
+  );
+  */
+  gulp.watch(imgSource, images);
+}
 
-//watch
-gulp.task('watch', ['sass', 'js', 'html', 'images', 'pug'], function () {
-	gulp.watch(sassSources, ['sass']);
-	gulp.watch(pugSources, ['pug']);
-	gulp.watch(pugIncludes, ['pug']);
-	gulp.watch(imgSources, ['images'])
-	gulp.watch(sassSources, ['sass'])
-	//gulp.watch(htmlSources, ['html']);
-});
-
-gulp.task('default', ['sass', 'js', 'pug', 'html', 'images', 'watch', 'connect']);
+// export tasks
+exports.images = images;
+exports.css = css;
+exports.scripts = scripts;
+exports.clean = clean;
+exports.build = build;
+exports.watch = watch;
+exports.default = build;

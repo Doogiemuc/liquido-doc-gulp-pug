@@ -95,14 +95,18 @@ blockquote {
 }
 
 blockquote::after {
-    display: block;
-    clear: both;
-    content: "";
+	display: block;
+	clear: both;
+	content: "";
 }
 
 .blockquote-footer {
 	float: right;
 	font-style: normal;
+}
+
+.alert p {
+	margin-left: 2.5rem;
 }
 
 
