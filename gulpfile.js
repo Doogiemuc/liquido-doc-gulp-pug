@@ -126,7 +126,7 @@ const watch  = gulp.parallel(watchFiles, browserSync);
 function watchFiles() {
   gulp.watch(scssSources, css);
   gulp.watch(jsSource, scripts);
-  gulp.watch(pugSource, gulp.series(renderPug, browserSyncReload))
+  gulp.watch([pugSource, pugIncludes], gulp.series(renderPug, browserSyncReload))
   /*
   gulp.watch(
     [

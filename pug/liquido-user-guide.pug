@@ -19,21 +19,39 @@ body
 						| Liquido User Guide
 						span.docs-time Last updated: 2019-12-30
 					
-				section.docs-section#what-is-liquido
-					h2.section-heading What is LIQUIDO?
+				section.docs-intro#what-is-liquido
+					h2.section-heading What is LIQUIDO ?
 					ul
-						li The goal of LIQUIDO is to offer a free, secure and liquid eVoting plattform.
+						li The goal of the LIQUIDO project is to offer a free, secure and liquid eVoting plattform.
 						li LIQUIDO implements the modern electoral concept called Liquid Democracy with Proxy Voting (Delegative Democracy).
 						li It extends these concepts, so that the whole voting process runs by itself, without the need for a central authority.
 						li And last but not least: Implementing LIQUIDO has been my personal hobby since more than four years now. I invested every last minute of my spare free time into it. I learned a lot from it.
 					p.
-						This User Guide is aimed at LIQUIDO users. Also beginners that are completely new to Liquid Democracy. It describes the LIQUIDO web application from an end user perspective.
-						Here the most basic concepts that LIQUIDO is built upon are introduced. Each section in this guide will walk you through the LIQUIDO voting process step by step.
+						This User Guide is aimed at LIQUIDO users that are completely new to Liquid Democracy. It describes the LIQUIDO web application and how it works.
+						Here the most basic concepts that LIQUIDO is built upon are introduced. The sections in this user guide will walk you through the LIQUIDO voting process step by step.
 					p.
 						This User Guide describes <em>how</em> the LIQUIDO web application works. 
 						If you want to know more about <em>why</em> LIQUIDO works the way it does, then you can find a more in depth discourse in the <a href="/liquido-thesis.html">LIQUIDO Thesis</a>.
-					p.
+					//p.
 						If you want to host your own instance of the LIQUIDO, then the <a href="liquido-tech.html">technical administration handbook</a> will help you set things up.
+
+				section.docs-section#liquid-democracy-video
+					h2.section-heading What is Liquid Democracy ?
+					iframe.shadow(width="560" height="315" src="https://www.youtube.com/embed/jPsfm6Y49aA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+					figcaption.figure-caption
+							i.fas.fa-info-circle.mr-2
+							| This video was created with the free version of <a href="http://www.mysimpleshow.com/" target="_blank">mySimpleShow</a>.
+
+			article.docs-article#liquido-web-app
+				header.docs-header
+					h1.docs-heading 
+						span.header-icon-holder
+							i.fas.fa-university
+						| The LIQUIDO Web App
+					section.docs-intro
+						p.
+							LIQUIDO is a web based application that runs in the browser. You do not need to install anything to use LIQUIDO. When you use LIQUIDO for the first time,
+							you must register as a new user first.
 
 				section.docs-section#register-login
 					h2.section-heading Register & Login
@@ -48,6 +66,7 @@ body
 							i.fas.fa-info-circle.mr-2
 							| Name, email and mobilephone are mandatory. Choose any avatar you like. Website is optional.
 
+					p In Liquido there are no passwords. Instead you will login with a one time token in the next step.
 					p After you have registered you are automatically forwarded to the login page. There are two ways to login to LIQUIDO. You can either login via your email or you can login via your mobilephone.
 
 					h4.mt-5 Login via Email
@@ -60,7 +79,9 @@ body
 					p.
 						Or alternatively you can login via SMS. Enter your mobile phone number and click the "Send login token" button. A 6 digit one time login token will be sent
 						to your mobilephone via SMS. Enter that 6-digit number in the 6 fields that are then shown. The SMS login token is only valid once!
-					img(src="images/screenshot-login-via-sms.png")
+					img.mb-3(src="images/screenshot-login-via-sms.png")
+					p.
+						When your token was correct you will be forwarded to the liquido start page. You can see your avatar at the top right when logged in.
 					
 				section.docs-section#main-navigation
 					h2.section-heading Main Navigation
@@ -71,7 +92,7 @@ body
 						The magnifying glass leads to the search page.
 						Click on your avatar to navigate to your User Home. The drop down menu behind your username shows further links, e.g. to add an idea or set a proxy.
 						
-					figure.figure.docs-figure.py-3
+					figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow(src="images/screenshot-main-navigation.png")
 
 					p.
@@ -83,7 +104,7 @@ body
 					h1.docs-heading 
 						span.header-icon-holder
 							i.fas.fa-angle-double-right
-						|LIQUIDO Voting Process
+						| LIQUIDO Voting Process
 					section.docs-intro
 						p.
 							The goal of LIQUIDO is to offer a free, secure and liquid eVoting platform that does not need a central authority. The whole voting process should be automatic.
@@ -137,7 +158,9 @@ body
 						When there already is a poll (in the same area than the proposal) that is still in elaboration phase, 
 						then the creator of the proposal can decide to join this already existing poll. He should do so if the poll is about the same topic.
 						This way his proposal will be put to the vote faster. All proposal in a poll must always be in the same area!
-					h4 Show poll details
+					
+				section.docs-section#show-poll-details
+					h2.section-heading Show poll details
 					p.
 						A poll consists of an unsorted set of proposals that joined the poll. A poll runs through phases: ELABORATION, VOTING and then FINISHED.
 						When the poll is initially created it consists of only one proposals. At least one more alternative proposal must join, before the voting phase can start.
@@ -210,12 +233,19 @@ body
 					p.
 						The proxy page shows information about your proxy and yourself as a proxy in each area. The top of part of each panel shows your currently assigned direct proxy in each area. If your direct proxy forwarded his right to vote to another parent proxy (and so on)
 						the top proxy at the end of this delegatin chain is shown. The bottom part of each panel shows information about you as a proxy in this area. If you are a public proxy and if there are any pending delegation requests.
-					figure.figure.docs-figure.py-3
-						img.figure-img.img-fluid.border.shadow.rounded(src="images/scsreenshot-assigned-proxies.png")
+					figure.docs-figure
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-assigned-proxies.png")
+						figcaption.figure-caption.mb-3.text-center
+							i.fas.fa-info-circle.mr-2
+							| User's proxy page
+
 					p To edit your proxy in an area click on its avatar image. To assign a new proxy click on the "Assign proxy" placeholder. On the edit proxy page you can then select a new proxy.
 					p If a proxy is not a public proxy, then the delegation can only be requested. The proxy must still accept the delegation.
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-edit-proxy.png")
+						figcaption.figure-caption.mb-3.text-center
+							i.fas.fa-info-circle.mr-2
+							| Assign a proxy
 
 				section.docs-section#delegatin-requests
 					h2.section-heading Delegation requests
@@ -287,6 +317,10 @@ body
 						When a user wants to assign a proxy but this proxy is not (yet) a public proxy, then the delegation can only be requested. The proxy must still accept his delegation requests.
 						The delegation points from a delegee to a proxy. It references the user's right to vote that shall be delegated.
 					
+					h2.section-heading Domain  Overview
+					p.
+						This figure is a techical class diagram of the LIQUIDO domain objects. It also shows the relations between the objects.
+
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid(src="images/liquido-class-diagram-plantUML.png")
 					
