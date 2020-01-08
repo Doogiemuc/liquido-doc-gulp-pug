@@ -6,26 +6,26 @@ body
 	include includes/_fixed-nav.pug
 
 .docs-wrapper
-	
+
 	include includes/_thesis-sidebar.pug
-	
-	.docs-content
+
+	.docs-content#liquido-thesis
 		.container
-			article.docs-article#liquido-thesis
+			article.docs-article
 				header.docs-header
 					h1.docs-heading
 						span.header-icon-holder
 							i.fas.fa-flask
 						| Liquido Thesis
 						span.docs-time Last updated: 2019-12-30
-					
+
 				section.docs-section#how-does-liquido-work
 					h2.section-heading How does LIQUIDO work?
 					p.
 						This thesis is a more in depth discourse about the philophical backround of Liquid Democracy. LIQUIDO it is an implementation of Liquid Democracy
 						with Proxy Voting and some new extions to this great electoral concept. This thesis describes <em>WHY</em> Liquido works the way it does.
-					
-					
+
+
 				section.docs-section
 					h2.section-heading Democracy
 					blockquote
@@ -37,8 +37,8 @@ body
 					p.
 						In its original form in ancient greek, the people (actually only men at that time) gathered together in one place and discussed current political topics. Unfortunately, this only works up to a certain number of people.
 						In a larger state with thousands of citizens it is not feasible to discussing everything with everybody. The next best way of involving every citizen in political decisions is:
-						
-					h2.section-heading Direct Democacy 
+
+					h2.section-heading Direct Democacy
 					blockquote
 						| Direct democracy or pure democracy is a form of democracy in which people decide on policy initiatives directly. [...] In direct democracy, people decide on policies without any intermediary.
 						footer.blockquote-footer
@@ -50,7 +50,7 @@ body
 
 					h2.section-heading Representative Democracy
 					blockquote
-						| Representative democracy (also indirect democracy, representative government or psephocracy) is a type of democracy founded on the principle of elected officials representing a group of people, 
+						| Representative democracy (also indirect democracy, representative government or psephocracy) is a type of democracy founded on the principle of elected officials representing a group of people,
 						| as opposed to direct democracy. Nearly all modern Western-style democracies are types of representative democracies.
 						footer.blockquote-footer
 							a(href="https://en.wikipedia.org/wiki/Representative_democracy" target="_blank") https://en.wikipedia.org/wiki/Representative_democracy
@@ -62,8 +62,8 @@ body
 						During this time, citizens have virtually no influence on political decisions. The press does have some power as a controlling body as it can investigate and publish political crimes.
 						But the individual has not.
 					p.
-						So, what could be the best middle ground between direct and representative democracy that combines the advantages of both electora systems? 
-						
+						So, what could be the best middle ground between direct and representative democracy that combines the advantages of both electora systems?
+
 
 					h2.section-heading#liquid-democracy Liquid Democracy
 					blockquote
@@ -71,7 +71,7 @@ body
 						| Voters can either vote directly or delegate their vote to other participants; voters may also select different delegates for different issues.
 						footer.blockquote-footer
 							a(href="https://en.wikipedia.org/wiki/Liquid_democracy" target="_blank") https://en.wikipedia.org/wiki/Liquid_democracy
-					.alert.alert-info 
+					.alert.alert-info
 						i.fas.fa-arrow-alt-circle-right.fa-2x.float-left
 						p In Liquid Democracy a voter can always vote for himself no matter whether he currently has delegated his voting power to a proxy or not. And a delegation to a proxy may be revoked at any time.
 					p.
@@ -80,14 +80,14 @@ body
 					p.
 						Political parties can also be represented in this system. The head of the party is just simply a proxy for everyone that want's to elect this party. The difference
 						in Liquid Democracy is, that this election, the delegation of ones voting power to this political party, can be revoked (and then possible re-assigned to another party) at any time.
-					
+
 					h2.section-heading#liquid-democracy-explained Liquid Democracy Explained - Video
 					iframe(width="560" height="315" src="https://www.youtube-nocookie.com/embed/fg0_Vhldz-8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 
-					
+
 			article.docs-article#liquido-voting-process
 				header.docs-header
-					h1.docs-heading 
+					h1.docs-heading
 						span.header-icon-holder
 							i.fas.fa-angle-double-right
 						| LIQUIDO Voting Process
@@ -104,31 +104,31 @@ body
 						The creator of the idea can then start a new poll. Other ideas that have reached their quorum and became a proposal can now join this poll. But they
 						must have reached their quorum.
 					p.
-						The elaboration phase runs for a defined amount of time, e.g. two weeks. During this phase the proposals in the poll can be discussed. Each creator of a 
+						The elaboration phase runs for a defined amount of time, e.g. two weeks. During this phase the proposals in the poll can be discussed. Each creator of a
 						proposal can (and should) update his proposal according to this discussion.
 						When the elaboration phase is finished, then the voting phase starts. Then voters can cast their vote in this poll.
 					p.
 						In LIQUIDO you as a voters don't just vote for or against a proposal, but instead you sort the proposals into your preferred order. You do not have to vote for
-						all proposals. Just the ones that you chose. In your preferred order. 
+						all proposals. Just the ones that you chose. In your preferred order.
 					p.
 						LIQUIDO then selects the winning proposal of the poll with the well researched <a href="https://en.wikipedia.org/wiki/Ranked_pairs">Ranked Pairs</a> electoral system.
-					
-					
+
+
 
 			article.docs-article#anonymous-evoting
 				header.docs-header
-					h1.docs-heading 
+					h1.docs-heading
 						span.header-icon-holder
 							i.fas.fa-vote-yea
 						| Anonymous electronic voting
 					section.docs-intro
 						p.
 							Electronic voting is a topic on its own which is not necessarily linked to Liquid Democracy, although it is most of the times mentioned in combination with LD.
-							In any democratic system votes must be free, equal and private. Free in the sense that the voter must be allowed to freely choose <em>how</em> to vote. 
-							Equal means that every vote is counted equally. No vote is more important than another. And private means that a voter must be able to vote secretely and 
+							In any democratic system votes must be free, equal and private. Free in the sense that the voter must be allowed to freely choose <em>how</em> to vote.
+							Equal means that every vote is counted equally. No vote is more important than another. And private means that a voter must be able to vote secretely and
 							that he does not have to reveal how he voted. A voter still <em>may</em> say how he voted, if he want's to. Wheather his statement is true or if it can be proven
 							is yet another very important attribute of electronic voting systems that needs to be studied in more detail.
-				
+
 				section.docs-section#secure-evoting
 					h2.section-header Secure eVoting
 					p.
@@ -162,11 +162,11 @@ body
 					p.
 						Yes there are mathematical functions that fullfill these requierements. They have funny names like MD5, SHA-128 and BCRYPT. The most important attribute
 						of these hash functions is the "one way" kind of calculation from input to output but not easily the other way round. We can use exactly this to implement electronic elections.
-				
+
 				section.docs-section#evoting-with-hash-functions
 					h2.section-header#voting-hash Electronig Voting with hash functions
 					p.
-						The digital representation of a voters right to vote can be represented like this: The voting platform creates a random voter token and calculates the hash of this voter token. 
+						The digital representation of a voters right to vote can be represented like this: The voting platform creates a random voter token and calculates the hash of this voter token.
 						The hashed value is stored on the server and the voter token is passed to the voter on an secure, encrypted channel. To improve security the server will always use a salt to
 						generate any hashed value.
 					p.
@@ -176,30 +176,30 @@ body
 
 					figure.figure.docs-figure.py-3
 							img.figure-img.img-fluid.border.shadow(src="images/Cast Vote.svg")
-			
+
 			article.docs-article#proxy-voting
 				header.docs-header
-					h1.docs-heading 
+					h1.docs-heading
 						span.header-icon-holder
 							i.fas.fa-share-square
 						| Proxy Voting
 					section.docs-intro
 						p So how to implement the delegation of one's vote to a proxy using the hashed voter token described in the previous chapter?
-				
+
 				section.docs-section#proxy-voting-impl
 					h2.section-header#impl-proxy-voting Implementation of Proxy Voting
 					p.
 						When a voter assigns a proxy in an area then the stored right to vote is delegated to the right to vote of the proxy.
-						When the proxy casts his own vote, then he has to to this by providing his voter token just as anybody else. In addition to his own vote, the same ballot is also generated for all 
+						When the proxy casts his own vote, then he has to to this by providing his voter token just as anybody else. In addition to his own vote, the same ballot is also generated for all
 						right to votes that are delegated to him (recursively). So the proxies vote then counts that many times.
-				
+
 				section.docs-section#tree-of-proxies
 					h2.section-header Tree of proxies
 					p A proxy may in turn delegate all his collected rights to vote to another parent proxy. This way a tree of proxies evolves where the voting power culminates at the top. You can always see who is your effective proxy at the top of this chain.
 					p In Liquido you as a voter may always cast a vote on your own, also when a proxy is assigned. You can even overrule an already casted vote of your proxy in a poll (as long as the poll is still in its voting phase). The vote of a proxy will never overrule an already casted vote by you. And you may completely revoke your delegation to a proxy at any time.
 					p This way the tree of delegations is in a constant state of change - it's kind of liquid.
 
-					.alert.alert-info 
+					.alert.alert-info
 						i.fas.fa-arrow-alt-circle-right.fa-2x.float-left.mr-2
 						| <p>There is one thing to consier when a voter accepts delegations and this becomes a proxy. When a proxy casts a vote, then ballots for his delegees will also be created.
 						| That means that his delegees will know how the he voted. Therefore a voter in LIQUIDO delegations must be requested. A voter may decide <em>not</em> to accept any delegations.
@@ -211,20 +211,9 @@ body
 						On the other hand, when someone want's to become a proxy for as many voters as possible, then he can become a <em>public proxy</em> in LIQUIDO.
 						Then all delegation requests to him will automatically be accepted.
 
-			article.docs-article#comparison
-				header.docs-header
-					h1.docs-heading 
-						span.header-icon-holder
-							i.fas.fa-exchange-alt
-						| Comparison to other projects
-					section.docs-intro
-						p.
-							LIQUIDO is not the only implementation of Liquid Democracy. Here you can find a comparison of the features of LIQUIDO with the others tools.
-
-
 			article.docs-article#FAQ
 				header.docs-header
-					h1.docs-heading 
+					h1.docs-heading
 						span.header-icon-holder
 							i.fas.fa-question
 						| LIQUIDO FAQ
@@ -232,28 +221,53 @@ body
 						p.
 							These are the most commonly asked questions or reservations that are raised against Liquid Democracy.
 
-					h4 Is my vote secret?
+					h4#faq-vote-private Is my vote secret?
+					p.
+						Voting in LIQUIDO is absolutely anonymous. When you cast a vote in LIQUIDO, then your ballot with your preferred vote order does not contain any reference whatsoever
+						to your personal user account. Still you, and only you(!), can verify that your ballot was counted correctly in a poll.	This is archived with a mathematical secure
+						algorithm called "hashing".
+					p.
+						When you want to cast a vote in LIQUIDO then you must first receive your voter token. This voter token is confidential and only you must know it.
+						In a secend step you anonymously cast your vote with this voter token. In this second step the server does not know <em>WHO</em> casts this vote.
+						It only verifies very carefully that the passed voter token is valid. Only then the ballot is accepted and counted.
 
-					h4 I don't want to delegate my vote to someone I don't know
+					h4#faq-delegation-to-proxy I don't want to delegate my vote to someone I don't know
+					p.
+						You don't have to delegate your right to vote to anyone. You can always directly take part in any poll yoursef. Direct Democracy is completely a part of Liquid Democracy.
+
+					h4#faq-elect-party How can I elect a political party?
+					p.
+						Although Liquid Democracy does not necessarily need any political parties, the concept of political parties can still be implemented within LIQUIDO.
+						When a voter simply delegates his right to vote to the "leader" of a political party, then this leader can cast votes for all his "party members".
+						The difference in LIQUIDO is that members do have the right to retract their delegations at any time, ie. quit the party whenever they want.
 
 
-					hr
+					hr.my-5
 					h2.section-header#further-readings
 					p.
-						This is the end of the LIQUIDO Theses. This thesis is a more in depth discourse about the philosophical backround of Liquid Democracy. Here we described <em>WHY</em> Liquido works the way it does.
-						If you are looking for a step-by-step introduction to the LIQUIDO web app, then have a look at the <a href="/liquido-doc.html">LIQUIDO User Guide</a>.
-					p.
+						This is the end of the LIQUIDO Theses. This thesis is a more in depth discourse about the philosophical background of Liquid Democracy. Here we described <em>WHY</em> Liquido works the way it does.
+						If you are looking for an easier step-by-step introduction to the LIQUIDO web app, then have a look at the <a href="/liquido-user-guide.html">LIQUIDO User Guide</a>.
+					//p.
 						If you want to host your own instance of the LIQUIDO, then the <a href="liquido-tech.html">technical administration handbook</a> will help you set things up.
+
+
+			//article.docs-article#comparison
+				header.docs-header
+					h1.docs-heading
+						span.header-icon-holder
+							i.fas.fa-exchange-alt
+						| Comparison to other projects
+					section.docs-intro
+						p.
+							LIQUIDO is not the only implementation of Liquid Democracy. Here you can find a comparison of the features of LIQUIDO with the others tools.
 
 			footer.footer
 				.container.text-right.py-5
 					hr
-					<!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
 					small.copyright
-						a.theme-link(href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-4-documentation-template-for-software-projects/" target="_blank") Layout template
-						| 
-						span designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley (3rd Wave Media)</a> for developers
-
+						a(href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-4-documentation-template-for-software-projects/" target="_blank") Layout Template
+						| &nbsp;&copy;
+						a(href='https://themes.3rdwavemedia.com/' target='_blank') 3rd Wave Media
 
 // Javascript
 script(src='assets/plugins/jquery-3.4.1.min.js')

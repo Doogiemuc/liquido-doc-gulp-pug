@@ -6,9 +6,9 @@ body
 	include includes/_fixed-nav.pug
 
 .docs-wrapper
-	
+
 	include includes/_user-guide-sidebar.pug
-	
+
 	.docs-content
 		.container
 			article#liquido-user-guide.docs-article
@@ -18,7 +18,7 @@ body
 							i.fas.fa-map-signs
 						| Liquido User Guide
 						span.docs-time Last updated: 2019-12-30
-					
+
 				section.docs-intro#what-is-liquido
 					h2.section-heading What is LIQUIDO ?
 					ul
@@ -30,7 +30,7 @@ body
 						This User Guide is aimed at LIQUIDO users that are completely new to Liquid Democracy. It describes the LIQUIDO web application and how it works.
 						Here the most basic concepts that LIQUIDO is built upon are introduced. The sections in this user guide will walk you through the LIQUIDO voting process step by step.
 					p.
-						This User Guide describes <em>how</em> the LIQUIDO web application works. 
+						This User Guide describes <em>how</em> the LIQUIDO web application works.
 						If you want to know more about <em>why</em> LIQUIDO works the way it does, then you can find a more in depth discourse in the <a href="/liquido-thesis.html">LIQUIDO Thesis</a>.
 					//p.
 						If you want to host your own instance of the LIQUIDO, then the <a href="liquido-tech.html">technical administration handbook</a> will help you set things up.
@@ -44,7 +44,7 @@ body
 
 			article.docs-article#liquido-web-app
 				header.docs-header
-					h1.docs-heading 
+					h1.docs-heading
 						span.header-icon-holder
 							i.fas.fa-university
 						| The LIQUIDO Web App
@@ -74,7 +74,7 @@ body
 						Enter your email adress and click the "Send login link" button. Then a magic login link will be sent to your email account. Simply click on the link in
 						the received email and you will be logged in. Keep in mind, that the magic link in the email is only valid for a limit amount of time. After that you have to login again.
 					img(src="images/screenshot-login-via-email.png")
-					
+
 					h4.mt-5 Login via SMS
 					p.
 						Or alternatively you can login via SMS. Enter your mobile phone number and click the "Send login token" button. A 6 digit one time login token will be sent
@@ -82,7 +82,7 @@ body
 					img.mb-3(src="images/screenshot-login-via-sms.png")
 					p.
 						When your token was correct you will be forwarded to the liquido start page. You can see your avatar at the top right when logged in.
-					
+
 				section.docs-section#main-navigation
 					h2.section-heading Main Navigation
 					p.
@@ -91,20 +91,20 @@ body
 					p.
 						The magnifying glass leads to the search page.
 						Click on your avatar to navigate to your User Home. The drop down menu behind your username shows further links, e.g. to add an idea or set a proxy.
-						
+
 					figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow(src="images/screenshot-main-navigation.png")
 
 					p.
 						Each arrow leads to an overview page that shows a list of current Ideas, Proposals, Polls and Laws. And yes the arrows do represent a process from left to right.
-				
 
-			article.docs-article#liquido-voting-process
+
+			article.docs-article#voting-basics
 				header.docs-header
-					h1.docs-heading 
+					h1.docs-heading
 						span.header-icon-holder
 							i.fas.fa-angle-double-right
-						| LIQUIDO Voting Process
+						| LIQUIDO Voting Basics
 					section.docs-intro
 						p.
 							The goal of LIQUIDO is to offer a free, secure and liquid eVoting platform that does not need a central authority. The whole voting process should be automatic.
@@ -117,20 +117,20 @@ body
 							The creator of the idea can then start a new poll. Other ideas that have reached their quorum and became a proposal can now join this poll. But they
 							must have reached their quorum.
 						p.
-							The elaboration phase runs for a defined amount of time, e.g. two weeks. During this phase the proposals in the poll can be discussed. Each creator of a 
+							The elaboration phase runs for a defined amount of time, e.g. two weeks. During this phase the proposals in the poll can be discussed. Each creator of a
 							proposal can (and should) update his proposal according to this discussion.
 							When the elaboration phase is finished, then the voting phase starts. Then voters can cast their vote in this poll.
 						p.
 							In LIQUIDO you as a voters don't just vote for or against a proposal, but instead you sort the proposals into your preferred order. You do not have to vote for
-							all proposals. Just the ones that you chose. In your preferred order. 
+							all proposals. Just the ones that you chose. In your preferred order.
 						p.
 							LIQUIDO then selects the winning proposal of the poll with the well researched <a href="https://en.wikipedia.org/wiki/Ranked_pairs">Ranked Pairs</a> electoral system.
 
 				section.docs-section#add-idea
 					h2.section-heading Add an idea
 					p.
-						Everything starts with an idea. An idea might be any suggestion for improvement. When someone suggests an idea, then he looks for support 
-						for his idea. Other LIQUIDO users can like and idea and thus support it. 
+						Everything starts with an idea. An idea might be any suggestion for improvement. When someone suggests an idea, then he looks for support
+						for his idea. Other LIQUIDO users can like and idea and thus support it.
 					p.
 						Every idea is created in an area. An area can by a category, a department or a topic. This depends on what you are using LIQUIDO for. For example if you are a small group of people in a social club,
 						then your areas might be "finance", "spokesman" and "events". If you are a school class, then your areas might be "timetable", "excursions" and "canteen".
@@ -143,7 +143,7 @@ body
 					p When the creator of a proposal wants to put his proposal to the vote, then he can choose to either start a new poll or join an existing poll.
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-proposal-in-elaboration.png")
-					
+
 				section.docs-section#start-join-poll
 					h2.section-heading Start or join a poll
 					h4 Start a new poll
@@ -155,10 +155,10 @@ body
 						proposal might then receive the highest support in the coming voting phase.
 					h4 Join an existing poll
 					p.
-						When there already is a poll (in the same area than the proposal) that is still in elaboration phase, 
+						When there already is a poll (in the same area than the proposal) that is still in elaboration phase,
 						then the creator of the proposal can decide to join this already existing poll. He should do so if the poll is about the same topic.
 						This way his proposal will be put to the vote faster. All proposal in a poll must always be in the same area!
-					
+
 				section.docs-section#show-poll-details
 					h2.section-heading Show poll details
 					p.
@@ -168,7 +168,7 @@ body
 					p When voting starts, then the proposals in this poll cannot be changed anymore. Voters can then cast their vote.
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-poll-in-elaboration.png")
-					
+
 			article.docs-article#cast-vote
 				header.docs-header
 					h1.docs-heading
@@ -190,14 +190,14 @@ body
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-poll-in-voting.png")
 
 					p#sort-proposals.
-						Click on the "Cast vote" button. On  the next page you can now sort the proposals into your prefferred order in your ballot. Simply drag proposals from the left 
+						Click on the "Cast vote" button. On  the next page you can now sort the proposals into your prefferred order in your ballot. Simply drag proposals from the left
 						to the right. And sort your most preferred proposal to the top. You do not necessarily need to vote for all proposals in the poll. When you are finished sorting click on the "Next" button.
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-sort-proposals.png")
 
 					p#fetch-voter-token To finally cast your vote now two steps are necessary in LIQUIDO:
 					p.
-						First we fetch a <em>Voter Token</em> from the LIQUIDO backend. A voter token is the digital representation of your right to vote. With this token a ballot can be casted anonymously. 
+						First we fetch a <em>Voter Token</em> from the LIQUIDO backend. A voter token is the digital representation of your right to vote. With this token a ballot can be casted anonymously.
 						The Voter Token is confidential! It must not be revealed!
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-cast-vote-start.png")
@@ -259,7 +259,7 @@ body
 								But only your delegees will be able to see how you voted. No one else!
 							p.
 								If you don't want that you simply dont't need to accept any delegation requests. Then your vote will stay completely private and secret. But of course then it will only count one time.
-					
+
 					h2.section-heading#public-proxy Become a public proxy
 					p.
 						When you want to collect as many delegations as possible, you can decide to become a <em>public proxy.</em> Your username will internally be stored with your right to vote, so that other users
@@ -272,7 +272,7 @@ body
 							i.fas.fa-project-diagram
 						| LIQUIDO Domain Model
 					section.docs-intro
-						p The above sections looked at the LIQUIDO voting process from start to finish. This section describes the LIQUIDO domain objects in more detail.			
+						p The previous sections looked at the LIQUIDO voting process from start to finish. This section describes the involved domain objects in more detail.
 
 				section.docs-section#ideas
 					h2.section-heading#domain-ideas Ideas
@@ -286,12 +286,12 @@ body
 						An area can be a category, a department or just simply a topic. This depends in which context you are using LIQUIDO. For example if you are a social club
 						your areas might be "finance", "functions" or "statute". If you are a school your areas might be "excursions", "lessons" or "canteen".
 						Ideas, Proposals, Polls, Laws and Proxies are all "per area".
-					
+
 					h2.section-heading#domain-proposals Proposals
 					p When an idea receives enough support, it becomes a proposal. A proposal has a title, description and a status.
 					p A proposal can be discussed. Users can add comments to a proposal. The creator of the proposal can (and should) update his description according to the comments.
 					p When the creator of a proposal wants to put his proposal to the vote, then he can choose to either start a new poll with his proposal or to join an existing poll.
-					
+
 					h2.section-heading#domain-polls Polls
 					p.
 						A poll consinsts of an unsorted set of proposals. Initially a poll may have only one proposals until further alternative proposals join. During this ELABORATION phase
@@ -316,28 +316,28 @@ body
 					p.
 						When a user wants to assign a proxy but this proxy is not (yet) a public proxy, then the delegation can only be requested. The proxy must still accept his delegation requests.
 						The delegation points from a delegee to a proxy. It references the user's right to vote that shall be delegated.
-					
+
 					h2.section-heading Domain  Overview
 					p.
 						This figure is a techical class diagram of the LIQUIDO domain objects. It also shows the relations between the objects.
 
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid(src="images/liquido-class-diagram-plantUML.png")
-					
-					hr
+
+					hr.my-5
 					h2.section-header#further-readings
 					p.
-						This is the end of the LIQUIDO User Guide. This guide is aimed at LIQUIDO users. It describes <em>HOW</em> the LIQUIDO web app works. If you wont to know more details about
+						This is the end of the LIQUIDO User Guide. This guide described <em>HOW</em> the LIQUIDO web app works. If you wont to know more details about
 						<em>WHY</em> LIQUIDO works the way it does, then you can find a more in depth discourse in the <a href="/liquido-thesis.html">LIQUIDO Thesis</a>.
-					p.
+					//p.
 						If you want to host your own instance of the LIQUIDO, then the <a href="liquido-tech.html">technical administration handbook</a> will help you set things up.
 
 			footer.footer
 				.container.text-right.py-5
+					hr
 					small.copyright
 						a(href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-4-documentation-template-for-software-projects/" target="_blank") Layout Template
-						| 
-						span &copy; 
+						| &nbsp;&copy;
 						a(href='https://themes.3rdwavemedia.com/' target='_blank') 3rd Wave Media
 
 

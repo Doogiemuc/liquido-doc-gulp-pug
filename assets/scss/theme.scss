@@ -1,12 +1,12 @@
 /*************************** Theme Colours****************************/
 // Define theme colour scheme
-$theme-color-primary: #28b76b;
+$theme-color-primary: #337ab7; // #28b76b;
 
 $theme-text-color-primary: #252930;
 $theme-text-color-secondary: lighten($theme-text-color-primary, 25%);
 $theme-text-color-light: lighten($theme-text-color-primary, 40%);
 
-$theme-bg-light: #f4fcf6;
+$theme-bg-light: lighten($theme-color-primary, 40%);
 $theme-bg-dark: $theme-color-primary;
 $theme-bg-color: $theme-color-primary;
 
@@ -49,15 +49,72 @@ $gray-800: lighten($theme-text-color-secondary, 10%);
 $gray-900: $theme-text-color-primary;
 
 $theme-colors: (
-  "primary":  $theme-color-primary, 
-  "secondary": $theme-text-color-secondary, 
+  "primary":  $theme-color-primary,
+  "secondary": $theme-text-color-secondary,
   "success": $theme-success-color,
   "danger": $theme-danger-color,
   "warning": $theme-warning-color,
   "info": $theme-info-color,
 );
 
+/*************************** Custom SCSS for Thesis ****************************/
+
+$thesis-text-color-primary: #28b76b;
+$thesis-text-color-secondary: lighten($thesis-text-color-primary, 25%);
+$thesis-bg-light: lighten($thesis-text-color-primary, 40%);
+
+.thesis-color-primary {
+		color: $thesis-text-color-primary;
+}
+
+
+div.card.thesis-card {
+	.theme-icon-holder {
+		color: $thesis-text-color-primary;
+		background: $thesis-bg-light;
+	}
+	&:hover {
+		background: $thesis-bg-light;
+	}
+}
+
+.thesis-sidebar .docs-nav {
+	.nav-link {
+		color: $thesis-text-color-secondary;
+		&:before {
+			color: $thesis-text-color-secondary;
+			background-color: $thesis-bg-light;
+		}
+		.theme-icon-holder {
+			color: $thesis-text-color-secondary;
+			background: $thesis-bg-light;
+		}
+		&.active {
+			color: $thesis-text-color-primary;
+			font-weight: bold;
+			&:before {
+				background-color: $thesis-text-color-primary;
+			}
+			.theme-icon-holder {
+				color: #fff;
+				background-color: $thesis-text-color-primary;
+			}
+		}
+	}
+}
+
+#liquido-thesis {
+	.header-icon-holder {
+		color: #fff;
+		background-color: $thesis-text-color-primary;
+	}
+}
+
+
 /*************************** Custom SCSS for LIQUIDO ****************************/
+.theme-color-primary {
+		color: $theme-color-primary;
+}
 
 #docs-nav {
 	li.section-title {
@@ -75,7 +132,7 @@ $theme-colors: (
 .docs-article {
 	.header-icon-holder {
 		display: inline-block;
-		background: #28b76b;
+		background: $theme-bg-dark;
 		color: white;
 		width: 3rem;
 		height: 3rem;
@@ -116,6 +173,3 @@ blockquote::after {
 
 /*************************** Theme Styles Section ****************************/
 @import "theme/_styles.scss"
-
-
-
