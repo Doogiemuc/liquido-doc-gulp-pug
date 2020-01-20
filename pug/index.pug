@@ -1,173 +1,79 @@
 doctype html
 head
 	include includes/_html-head.pug
-	title LIQUIDO Documentation
+	title LIQUIDO
 body
 	include includes/_fixed-nav.pug
-	include includes/_index-header.pug
 
 
 .page-content
 	.container
-		.docs-overview.py-5
+		.row.liquido-jumbotron
+			.col-12.col-lg-6
+				h1 A modern approach to Liquid&nbsp;Democracy
+				p.my-4 What if there was a middle ground between	giving away your right to vote to a parliament for a full legislative period or not voting at all?
+
+				.cta-btns
+					a.btn.btn-primary.mr-3(href="http://register.liquido.vote/" target="_blank") Get Started Free&nbsp;
+						i.fas.fa-angle-double-right
+					a.btn.btn-secondary(href="doc-index.html") LIQUIDO User Guide&nbsp;
+						i.fas.fa-angle-double-right
+			.col-12.col-lg-6.text-center.mt-5
+				span.fa-10x
+					span.fa-layers.fa-fw
+						i.fa.fa-university.theme-color-primary
+						i.fa.fa-lightbulb.transparent-90(data-fa-transform="shrink-6 up-7 left-8")
+						i.fa.fa-users.transparent-90(data-fa-transform="shrink-6 up-8 right-8")
+						i.fa.fa-vote-yea.transparent-90(data-fa-transform="shrink-6 down-7 right-10")
+						i.fa.fa-comments.transparent-90(data-fa-transform="shrink-6 down-7 left-10")
+
+
+	section.py-5.theme-bg-light
+		.container
 			.row
-				.col-12
-					h3.theme-color-primary LIQUIDO User Guide
+				.col-12.col-lg-6
+					h3 Secure web-based e-voting
+					p LIQUIDO uses mathematically proven secure algorithms such as BCRYPT to enforce digitally anonymous voting.
+					p When a voter casts his vote, then the backend does not and cannot know the voter's identity.
+					p At the same time every voter can validate wether his ballot was counted correctly with his checksum.
+					a.btn.btn-secondary.mb-5(href="doc-index.html") Read more&nbsp;
+						i.fas.fa-angle-double-right
+				.col-12.col-lg-6
+					img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-cast-vote-start.png")
+
+	section.py-5
+		.container
 			.row
-				.col-12.col-lg-4.py-3
-					.card.shadow-sm
-						.card-body
-							h5.card-title.mb-3
-								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-map-signs
-								span.card-title-text User Guide
-							.card-text
-								section
-								| The user guide is aimed at LIQUIDO users that are completely new to Liquid Democracy. It describes <em>how</em> LIQUIDO works.
-							a.card-link-mask(href="liquido-user-guide.html#liquido-user-guide")
+				.col-12.col-lg-6
+					h3 Voting in LIQUIDO
+					p.
+						In LIQUIDO you don't just vote for or against one proposal. Instead you can sort all Proposals
+						into your personally preferred order.
+					p.
+						When the voting phase of a poll is finished, then the winning proposal is calculated
+						with the well researched <a href="https://en.wikipedia.org/wiki/Ranked_pairs">Ranked Pairs</a> electoral system.
+					a.btn.btn-secondary.mb-5(href="doc-index.html") Read more&nbsp;
+						i.fas.fa-angle-double-right
+				.col-12.col-lg-6
+					img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-sort-proposals.png")
 
-				.col-12.col-lg-4.py-3
-					.card.shadow-sm
-						.card-body
-							h5.card-title.mb-3
-								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-angle-double-right
-								span.card-title-text The LIQUIDO Web App
-							.card-text
-								section
-								| LIQUIDO is a web app that runs in your browser. The article describes how to register and login.
-							a.card-link-mask(href="liquido-user-guide.html#liquido-web-app")
+	section.py-5.theme-bg-light
+		.container
+				.row
+					.col-12.col-lg-6
+						h3 Liquid Democracy
+						blockquote
+							| Liquid Democracy (also known as delegative democracy) is a form of democracy whereby an electorate has the option of vesting voting power in delegates rather than voting directly themselves.
+							| Voters can either vote directly or delegate their vote to other participants; voters may also select different delegates for different issues.
+							footer.blockquote-footer
+								a(href="https://en.wikipedia.org/wiki/Liquid_democracy" target="_blank") https://en.wikipedia.org/wiki/Liquid_democracy
+						a.btn.btn-primary.btn-sm.my-3(href="doc-index.html#liquido-thesis") Liquido Thesis&nbsp;
+							i.fas.fa-angle-double-right
+					.col-12.col-lg-6.text-center
+						iframe(width="560" height="315" src="https://www.youtube.com/embed/jPsfm6Y49aA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+						figcaption.figure-caption
+								i.fas.fa-info-circle.mr-2
+								| Video created with <a href="http://www.mysimpleshow.com/" target="_blank">mySimpleShow</a>
 
-
-				.col-12.col-lg-4.py-3
-					.card.shadow-sm
-						.card-body
-							h5.card-title.mb-3
-								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-angle-double-right
-								span.card-title-text Voting Basics
-							.card-text
-								section
-								| This article in the user guide will give you a first general overview of the voting process in LIQUIDO.
-							a.card-link-mask(href="liquido-user-guide.html#voting-basics")
-
-				.col-12.col-lg-4.py-3
-					.card.shadow-sm
-						.card-body
-							h5.card-title.mb-3
-								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-vote-yea
-								span.card-title-text Cast a vote
-							.card-text
-								section
-								| In LIQUIDO you don't just vote for or against one proposal. Instead you sort proposals of a poll into your personally preferred order.
-							a.card-link-mask(href="liquido-user-guide.html#cast-vote")
-
-				.col-12.col-lg-4.py-3
-					.card.shadow-sm
-						.card-body
-							h5.card-title.mb-3
-								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-share-square
-								span.card-title-text Proxy Voting
-							.card-text
-								section
-								| In Liquid Democracy it is possible to delegate one's right to vote to a proxy. The the proxies vote will also count for you.
-								| Of course you may always decide to vote on your own.
-							a.card-link-mask(href="liquido-user-guide.html#proxy-voting")
-
-				.col-12.col-lg-4.py-3
-					.card.shadow-sm
-						.card-body
-							h5.card-title.mb-3
-								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-project-diagram
-								span.card-title-text Domain Model
-							.card-text
-								section
-								| This section describes the elements of LIQUIDO in more detail: Ideas, Areas, Proposals, Polls, RightToVote, Ballots and Proxy Delegations.
-							a.card-link-mask(href="liquido-user-guide.html#domain-model")
-
-
-
-			.row
-				.col-12.pt-5
-					h3.thesis-color-primary LIQUIDO Thesis
-			.row
-				.col-12.col-lg-4.py-3
-					.card.shadow-sm.thesis-card
-						.card-body
-							h5.card-title.mb-3
-								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-flask
-								span.card-title-text LIQUIDO Thesis
-							.card-text
-								section
-								| The thesis is a more in depth discourse about the philophical backround of Liquid Democracy. It describe the theory behind
-								| Liquid Democracy. And it explains <em>WHY</em> LIQUIDO works the way it does.
-							a.card-link-mask(href="liquido-thesis.html")
-
-				.col-12.col-lg-4.py-3
-					.card.shadow-sm.thesis-card
-						.card-body
-							h5.card-title.mb-3
-								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-flask
-								span.card-title-text Voting Process
-							.card-text
-								section
-								| The whole LIQUIDO voting process is automatic. Voters themselves drive the process. There is no need for a central authority.
-							a.card-link-mask(href="liquido-thesis.html#liquido-voting-process")
-
-				.col-12.col-lg-4.py-3
-					.card.shadow-sm.thesis-card
-						.card-body
-							h5.card-title.mb-3
-								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-flask
-								span.card-title-text Anonymous eVoting
-							.card-text
-								section
-								| In any democratic system votes must be free, equal and private. How can we archive these properties with an electronic voting platform?
-							a.card-link-mask(href="liquido-thesis.html#anonymous-evoting")
-
-				.col-12.col-lg-4.py-3
-					.card.shadow-sm.thesis-card
-						.card-body
-							h5.card-title.mb-3
-								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-flask
-								span.card-title-text Proxy Voting
-							.card-text
-								section
-								| In Liquid Democracy a voter may forward his right to vote to a proxy. Who then can also cast a vote for him.
-								| The delegation to a proxy may be retrakted by the voter at any time.
-							a.card-link-mask(href="liquido-thesis.html#proxy-voting")
-
-				.col-12.col-lg-4.py-3
-					.card.shadow-sm.thesis-card
-						.card-body
-							h5.card-title.mb-3
-								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-flask
-								span.card-title-text LIQUIDO FAQ
-							.card-text
-								section
-								| Frequently Asked Questions about Liquid Democracy and our implementation LIQUIDO.
-							a.card-link-mask(href="liquido-thesis.html#FAQ")
-
-
-				//.col-12.col-lg-4.py-3
-					.card.shadow-sm
-						.card-body
-							h5.card-title.mb-3
-								span.theme-icon-holder.card-icon-holder.mr-2
-									i.fas.fa-cogs
-								span.card-title-text Technical Docs
-							.card-text
-								section
-								| Details of the open source LIQUIDO front end, the web application implemented with VueJS and node. And the LIQUIDO backend, a three tier Sprint-Boot server written in java.
-								| This documentation is aimed at developers and administrator who want to host their own instance of LIQUIDO.
-							a.card-link-mask(href="liquido-thesis.html")
 
 include includes/_footer.pug

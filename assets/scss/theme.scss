@@ -80,7 +80,7 @@ div.card.thesis-card {
 
 .thesis-sidebar .docs-nav {
 	.nav-link {
-		color: $thesis-text-color-secondary;
+		
 		&:before {
 			color: $thesis-text-color-secondary;
 			background-color: $thesis-bg-light;
@@ -113,7 +113,20 @@ div.card.thesis-card {
 
 /*************************** Custom SCSS for LIQUIDO ****************************/
 .theme-color-primary {
-		color: $theme-color-primary;
+	color: $theme-color-primary;
+}
+
+.liquido-jumbotron {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+.transparent-90 {
+	opacity: 0.9;
+}
+
+.figure-caption a {
+	color: $gray-600;
 }
 
 #docs-nav {
@@ -164,6 +177,13 @@ blockquote::after {
 
 .alert p {
 	margin-left: 2.5rem;
+}
+
+.copyright {
+	color: $gray-500;
+	a {
+		color: $gray-500;
+	}
 }
 
 
