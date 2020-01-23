@@ -12,4 +12,5 @@ header.header.fixed-top
 					li.list-inline-item
 						a(href="https://github.com/Doogiemuc/liquido-vue-frontend" target="_blank")
 							i.fab.fa-github.fa-fw
-				a.btn.btn-primary.d-none.d-lg-flex(href="http://www.liquido.vote" target="_blank") LIQUIDO Web App
+				unless hideWebAppButton
+					a.btn.btn-primary.d-none.d-lg-flex(href="beta-warning.html") LIQUIDO Web App

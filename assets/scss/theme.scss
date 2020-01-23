@@ -80,7 +80,7 @@ div.card.thesis-card {
 
 .thesis-sidebar .docs-nav {
 	.nav-link {
-		
+
 		&:before {
 			color: $thesis-text-color-secondary;
 			background-color: $thesis-bg-light;
@@ -116,9 +116,21 @@ div.card.thesis-card {
 	color: $theme-color-primary;
 }
 
+.navbar-brand {
+	font-family: 'Libre Baskerville', serif;
+}
+
 .liquido-jumbotron {
 	padding-top: 5rem;
 	padding-bottom: 5rem;
+	p {
+		font-family: 'Libre Baskerville', serif;
+	}
+}
+
+.liquido-brand::after {
+	font-family: 'Libre Baskerville', serif;
+	content: "LIQUIDO";
 }
 
 .transparent-90 {
@@ -184,6 +196,22 @@ blockquote::after {
 	a {
 		color: $gray-500;
 	}
+}
+
+.under-construction {
+	background: repeating-linear-gradient(
+		50deg,
+		#440,
+		#440 9px,
+		#880 11px,
+		#880 20px,
+		#440 21px
+	);
+}
+
+.under-construction-inner {
+	color: black;
+	background: #FFD;
 }
 
 

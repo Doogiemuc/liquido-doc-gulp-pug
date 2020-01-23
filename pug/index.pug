@@ -6,74 +6,73 @@ body
 	include includes/_fixed-nav.pug
 
 
-.page-content
-	.container
-		.row.liquido-jumbotron
-			.col-12.col-lg-6
-				h1 A modern approach to Liquid&nbsp;Democracy
-				p.my-4 What if there was a middle ground between	giving away your right to vote to a parliament for a full legislative period or not voting at all?
-
-				.cta-btns
-					a.btn.btn-primary.mr-3(href="http://register.liquido.vote/" target="_blank") Get Started Free&nbsp;
-						i.fas.fa-angle-double-right
-					a.btn.btn-secondary(href="doc-index.html") LIQUIDO User Guide&nbsp;
-						i.fas.fa-angle-double-right
-			.col-12.col-lg-6.text-center.mt-5
-				span.fa-10x
-					span.fa-layers.fa-fw
-						i.fa.fa-university.theme-color-primary
-						i.fa.fa-lightbulb.transparent-90(data-fa-transform="shrink-6 up-7 left-8")
-						i.fa.fa-users.transparent-90(data-fa-transform="shrink-6 up-8 right-8")
-						i.fa.fa-vote-yea.transparent-90(data-fa-transform="shrink-6 down-7 right-10")
-						i.fa.fa-comments.transparent-90(data-fa-transform="shrink-6 down-7 left-10")
-
-
-	section.py-5.theme-bg-light
+	.page-content
 		.container
-			.row
-				.col-12.col-lg-6
-					h3 Secure web-based e-voting
-					p LIQUIDO uses mathematically proven secure algorithms such as BCRYPT to enforce digitally anonymous voting.
-					p When a voter casts his vote, then the backend does not and cannot know the voter's identity.
-					p At the same time every voter can validate wether his ballot was counted correctly with his checksum.
-					a.btn.btn-secondary.mb-5(href="doc-index.html") Read more&nbsp;
-						i.fas.fa-angle-double-right
-				.col-12.col-lg-6
-					img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-cast-vote-start.png")
+			.row.liquido-jumbotron
+				.col-12.col-lg-8
+					h1 A <span id="adjective">modern</a> approach to Liquid&nbsp;Democracy
+					p.my-4 What if there was a middle ground between	giving away your right to vote to a parliament for a full legislative period or not voting at all?
 
-	section.py-5
-		.container
-			.row
-				.col-12.col-lg-6
-					h3 Voting in LIQUIDO
-					p.
-						In LIQUIDO you don't just vote for or against one proposal. Instead you can sort all Proposals
-						into your personally preferred order.
-					p.
-						When the voting phase of a poll is finished, then the winning proposal is calculated
-						with the well researched <a href="https://en.wikipedia.org/wiki/Ranked_pairs">Ranked Pairs</a> electoral system.
-					a.btn.btn-secondary.mb-5(href="doc-index.html") Read more&nbsp;
-						i.fas.fa-angle-double-right
-				.col-12.col-lg-6
-					img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-sort-proposals.png")
+					.cta-btns
+						a.btn.btn-primary.mr-3(href="beta-warning.html") Get started free&nbsp;
+							i.fas.fa-angle-double-right
+						a.btn.btn-secondary(href="doc-index.html") LIQUIDO User Guide&nbsp;
+							i.fas.fa-angle-double-right
+				.col-12.col-lg-4.text-center.mt-5
+					span.fa-10x
+						span.fa-layers.fa-fw
+							i.fa.fa-university.theme-color-primary
+							i.fa.fa-lightbulb.transparent-90(data-fa-transform="shrink-6 up-7 left-8")
+							i.fa.fa-users.transparent-90(data-fa-transform="shrink-6 up-8 right-8")
+							i.fa.fa-vote-yea.transparent-90(data-fa-transform="shrink-6 down-7 right-10")
+							i.fa.fa-comments.transparent-90(data-fa-transform="shrink-6 down-7 left-10")
 
-	section.py-5.theme-bg-light
-		.container
+
+		section.py-5.theme-bg-light
+			.container
 				.row
 					.col-12.col-lg-6
-						h3 Liquid Democracy
-						blockquote
-							| Liquid Democracy (also known as delegative democracy) is a form of democracy whereby an electorate has the option of vesting voting power in delegates rather than voting directly themselves.
-							| Voters can either vote directly or delegate their vote to other participants; voters may also select different delegates for different issues.
-							footer.blockquote-footer
-								a(href="https://en.wikipedia.org/wiki/Liquid_democracy" target="_blank") https://en.wikipedia.org/wiki/Liquid_democracy
-						a.btn.btn-primary.btn-sm.my-3(href="doc-index.html#liquido-thesis") Liquido Thesis&nbsp;
+						h3 Secure web-based e-voting
+						p LIQUIDO uses mathematically proven secure algorithms such as BCRYPT to enforce digitally anonymous voting.
+						p When a voter casts his vote, then the backend does not and cannot know the voter's identity.
+						p At the same time every voter can validate wether his ballot was counted correctly with his checksum.
+						a.btn.btn-secondary.mb-5(href="doc-index.html") Read more&nbsp;
 							i.fas.fa-angle-double-right
-					.col-12.col-lg-6.text-center
-						iframe(width="560" height="315" src="https://www.youtube.com/embed/jPsfm6Y49aA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-						figcaption.figure-caption
-								i.fas.fa-info-circle.mr-2
-								| Video created with <a href="http://www.mysimpleshow.com/" target="_blank">mySimpleShow</a>
+					.col-12.col-lg-6
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-cast-vote-start.png")
 
+		section.py-5
+			.container
+				.row
+					.col-12.col-lg-6
+						h3 Voting in LIQUIDO
+						p.
+							In LIQUIDO you don't just vote for or against one proposal. Instead you can sort all Proposals
+							into your personally preferred order.
+						p.
+							When the voting phase of a poll is finished, then the winning proposal is calculated
+							with the well researched <a href="https://en.wikipedia.org/wiki/Ranked_pairs">Ranked Pairs</a> electoral system.
+						a.btn.btn-secondary.mb-5(href="doc-index.html") Read more&nbsp;
+							i.fas.fa-angle-double-right
+					.col-12.col-lg-6
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-sort-proposals.png")
 
-include includes/_footer.pug
+		section.py-5.theme-bg-light
+			.container
+					.row
+						.col-12.col-lg-6
+							h3 Liquid Democracy
+							blockquote
+								| Liquid Democracy (also known as delegative democracy) is a form of democracy whereby an electorate has the option of vesting voting power in delegates rather than voting directly themselves.
+								| Voters can either vote directly or delegate their vote to other participants; voters may also select different delegates for different issues.
+								footer.blockquote-footer
+									a(href="https://en.wikipedia.org/wiki/Liquid_democracy" target="_blank") https://en.wikipedia.org/wiki/Liquid_democracy
+							a.btn.btn-primary.btn-sm.my-3(href="doc-index.html#liquido-thesis") Liquido Thesis&nbsp;
+								i.fas.fa-angle-double-right
+						.col-12.col-lg-6.text-center
+							iframe(width="560" height="315" src="https://www.youtube.com/embed/jPsfm6Y49aA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+							figcaption.figure-caption
+									i.fas.fa-info-circle.mr-2
+									| Video created with <a href="http://www.mysimpleshow.com/" target="_blank">mySimpleShow</a>
+
+	include includes/_footer.pug

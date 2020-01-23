@@ -1,0 +1,26 @@
+doctype html
+head
+	include includes/_html-head.pug
+	title LIQUIDO
+body
+	- var hideWebAppButton=true
+	include includes/_fixed-nav.pug
+
+
+	.page-content
+		.container
+			.row.liquido-jumbotron
+				.col-12.col-lg-12
+					.under-construction.rounded.p-3
+						.p-lg-5.p-3.rounded.under-construction-inner
+							h1.mb-3 Warning
+							p LIQUIDO is currently in its public BETA phase.
+							p There currently is only one test instance of LIQUIDO. It is pre filled with example data. Pupils vote on issues in their school.
+							p You may freely use this test instance. You can create ideas, proposals and polls yourself.
+							p The database will be reset every night!!!
+
+							.cta-btns.mt-5
+								a.btn.btn-primary.mr-3(href="http://app.liquido.vote/" target="_blank") Start LIQUIDO WebApp&nbsp;
+									i.fas.fa-angle-double-right
+
+	include includes/_footer.pug
