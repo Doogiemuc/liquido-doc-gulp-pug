@@ -133,6 +133,14 @@ div.card.thesis-card {
 	content: "LIQUIDO";
 }
 
+.docs-overview span.card-icon-holder {
+	width: 50px;
+	height: 50px;
+	font-size: 2.0rem;
+	padding-top: 8px;
+	display: inline-block;
+}
+
 .transparent-90 {
 	opacity: 0.9;
 }
@@ -159,13 +167,13 @@ div.card.thesis-card {
 		display: inline-block;
 		background: $theme-bg-dark;
 		color: white;
-		width: 3rem;
-		height: 3rem;
-		font-size: 2rem;
-		line-height: normal;
+		width: 3.5rem;
+		height: 3.5rem;
+		font-size: 2.5rem;
 		text-align: center;
 		border-radius: 50%;
 		margin-right: 0.2em;
+		padding-top: 7px;
 	}
 }
 
@@ -214,6 +222,11 @@ blockquote::after {
 	background: #FFD;
 }
 
+.app-logo {
+	width: 80px;
+	height: 80px;
+	border-radius: 22.5%;
+}
 
 /*************************** Import Bootstrap  *****************************/
 @import "bootstrap/scss/bootstrap.scss";

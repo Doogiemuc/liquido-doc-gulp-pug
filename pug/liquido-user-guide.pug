@@ -17,7 +17,7 @@ body
 						span.header-icon-holder
 							i.fas.fa-map-signs
 						| Liquido User Guide
-						span.docs-time Last updated: 2019-12-30
+						span.docs-time Last updated: 2020-03-01
 
 				section.docs-intro#what-is-liquido
 					h2.section-heading What is LIQUIDO ?
@@ -50,38 +50,58 @@ body
 						| The LIQUIDO Web App
 					section.docs-intro
 						p.
-							LIQUIDO is a web based application that runs in the browser. You do not need to install anything to use LIQUIDO. When you use LIQUIDO for the first time,
-							you must register as a new user first.
+							LIQUIDO is a web based application that runs in the browser.
+						figure.figure.docs-figure.py-3
+							img.figure-img.img-fluid.border.shadow(src="images/screenshot-liquido-home.png")
 
 				section.docs-section#register-login
 					h2.section-heading Register & Login
-					p Navigate to LIQUIDO with your browser. Click on the "Register" button at the bottom of the LIQUIDO start page to register as a new user. If you already have registered before you can login at the top right.
-					figure.figure.docs-figure.py-3
-						img.figure-img.img-fluid.border.shadow(src="images/screenshot-liquido-home.png")
+					p.
+						When you use LIQUIDO for the first time, you must register as a new user. If you already have registered before you can directly login at the top right
+						of the web app.	Registration and login runs through three steps:
+					
+					ol
+						li Register as a new user
+						li Install the authy app on your mobile phone
+						li Login to LIQUIDO with a secure token from the authy app.
+
 
 					h4.mt-5 Register as a new user
-					figure
-						img(src="images/screenshot-register.png")
+					p Open the <a href="/beta-warning.html">LIQUIDO WebApp</a> with your browser. Click on the register button at the bottom and fill out the form.
+					figure.figure.docs-figure
+						img.figure-img.img-fluid.border.shadow(src="images/screenshot-register.png")
 						figcaption.figure-caption
 							i.fas.fa-info-circle.mr-2
 							| Name, email and mobilephone are mandatory. Choose any avatar you like. Website is optional.
 
-					p In Liquido there are no passwords. Instead you will login with a one time token in the next step.
-					p After you have registered you are automatically forwarded to the login page. There are two ways to login to LIQUIDO. You can either login via your email or you can login via your mobilephone.
 
-					h4.mt-5 Login via Email
-					p.
-						Enter your email adress and click the "Send login link" button. Then a magic login link will be sent to your email account. Simply click on the link in
-						the received email and you will be logged in. Keep in mind, that the magic link in the email is only valid for a limit amount of time. After that you have to login again.
-					img(src="images/screenshot-login-via-email.png")
+					h4.mt-5 Secure login with Authy App
 
-					h4.mt-5 Login via SMS
+
+					.alert.alert-info.my-3
+						img.app-logo.float-left(src="images/Authy_App_246.png")
+						p(style="margin-left: 100px").
+							You do not need to remember a password for Liquido. You will login with your mobile phone.
+							Please <a href="https://authy.com/install" target="_blank">install the Authy app.</a> You must use the same mobile number in Authy and LIQUIDO!
+							Authy can then generate time based one time tokens (T-OTP). These are like passwords but a T-OTP is only valid for a short time. Every 20 seconds the Authy App will automatically generate a new 6-digit token. This secure token will allow you to login.
+
 					p.
-						Or alternatively you can login via SMS. Enter your mobile phone number and click the "Send login token" button. A 6 digit one time login token will be sent
-						to your mobilephone via SMS. Enter that 6-digit number in the 6 fields that are then shown. The SMS login token is only valid once!
-					img.mb-3(src="images/screenshot-login-via-sms.png")
-					p.
-						When your token was correct you will be forwarded to the liquido start page. You can see your avatar at the top right when logged in.
+						After you have registered in LIQUIDO and installed the Authy app you can now login. Enter your mobile phone number and then request a token. Your mobile phone will show a popup message that directly leads you to the Authy App.
+						Open Authy and enter the six digits from the mobile app.
+					figure.figure.docs-figure.my-3
+						img.figure-img.img-fluid.border.shadow(src="images/screenshot-login-authy.png")
+					p Authy will automatically generate a new token every 20 seconds. Just simply enter the currently shown one.
+					p If your token was valid you will be forwarded to your user's LIQUIDO home page.
+					figure.figure.docs-figure.my-3
+						img.figure-img.img-fluid.border.shadow(src="images/screenshot-user-home.png")
+						figcaption.figure-caption.text-center
+							i.fas.fa-info-circle.mr-2
+							| You can easily come back to this page by clicking on your avatar at the top right.
+
+
+
+					
+						
 
 				section.docs-section#main-navigation
 					h2.section-heading Main Navigation
@@ -124,7 +144,7 @@ body
 							In LIQUIDO you as a voters don't just vote for or against a proposal, but instead you sort the proposals into your preferred order. You do not have to vote for
 							all proposals. Just the ones that you chose. In your preferred order.
 						p.
-							LIQUIDO then selects the winning proposal of the poll with the well researched <a href="https://en.wikipedia.org/wiki/Ranked_pairs">Ranked Pairs</a> electoral system.
+							LIQUIDO then selects the winning proposal of the poll with the well researched <a href="https://en.wikipedia.org/wiki/Ranked_pairs" target="_blank">Ranked Pairs</a> electoral system.
 
 				section.docs-section#add-idea
 					h2.section-heading Add an idea
@@ -190,15 +210,17 @@ body
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-poll-in-voting.png")
 
 					p#sort-proposals.
-						Click on the "Cast vote" button. On  the next page you can now sort the proposals into your prefferred order in your ballot. Simply drag proposals from the left
-						to the right. And sort your most preferred proposal to the top. You do not necessarily need to vote for all proposals in the poll. When you are finished sorting click on the "Next" button.
+						Click on the "Cast vote" button. On the next page you can now sort the proposals into your prefferred order in your ballot. Simply drag proposals from the left
+						to the right. Sort your favorite proposal to the top. You do not necessarily need to vote for all proposals in the poll. You may decide to only vote for some of the proposals.
+						All other proposals will then have a lower preference then the ones that you sorted into your ballot.
+						When you are finished sorting click on the "Next" button.
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-sort-proposals.png")
 
 					p#fetch-voter-token To finally cast your vote now two steps are necessary in LIQUIDO:
 					p.
-						First we fetch a <em>Voter Token</em> from the LIQUIDO backend. A voter token is the digital representation of your right to vote. With this token a ballot can be casted anonymously.
-						The Voter Token is confidential! It must not be revealed!
+						First we fetch a <em>voter token</em> from the LIQUIDO backend. A voter token is the digital representation of your right to vote. 
+						The voter token is confidential! It must not be revealed! With this voter token you can then anonymously cast your vote.
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-cast-vote-start.png")
 
@@ -206,7 +228,7 @@ body
 					figure.figure.docs-figure.py-3
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-cast-vote-success.png")
 
-					p In this example the voter was also a proxy for 8 other voters. So his vote counted that many times.
+					p The field at the bottom shows your ballot's checksum. With this checksum you can verify that your ballot was counted correctly in the poll.
 
 			article.docs-article#proxy-voting
 				header.docs-header

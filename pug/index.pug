@@ -27,6 +27,39 @@ body
 							i.fa.fa-vote-yea.transparent-90(data-fa-transform="shrink-6 down-7 right-10")
 							i.fa.fa-comments.transparent-90(data-fa-transform="shrink-6 down-7 left-10")
 
+		section.py-5.theme-bg-light
+			.container
+				.row
+					.col-12.col-lg-6
+						h3 LIQUIDO e-voting
+						p.
+							In LIQUIDO you don't just vote for or against one proposal. Instead you can sort the proposals of a poll
+							into your personally preferred order.
+						p.
+							When the voting phase of a poll is finished, then the winning proposal is calculated
+							with the well researched <a href="https://en.wikipedia.org/wiki/Ranked_pairs" target="_blank">Ranked Pairs</a> electoral system.
+						a.btn.btn-secondary.mb-5(href="doc-index.html") Read more&nbsp;
+							i.fas.fa-angle-double-right
+					.col-12.col-lg-6
+						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-sort-proposals.png")
+
+		section.py-5
+			.container
+					.row
+						.col-12.col-lg-6
+							h3 Liquid Democracy
+							blockquote
+								| Liquid Democracy (also known as delegative democracy) is a form of democracy whereby an electorate has the option of vesting voting power in delegates rather than voting directly themselves.
+								| Voters can either vote directly or delegate their vote to other participants; voters may also select different delegates for different issues.
+								footer.blockquote-footer
+									a(href="https://en.wikipedia.org/wiki/Liquid_democracy" target="_blank") https://en.wikipedia.org/wiki/Liquid_democracy
+							a.btn.btn-primary.btn-sm.my-3(href="doc-index.html#liquido-thesis") Liquido Thesis&nbsp;
+								i.fas.fa-angle-double-right
+						.col-12.col-lg-6.text-center
+							iframe(width="560" height="315" src="https://www.youtube.com/embed/jPsfm6Y49aA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).border.shadow.rounded
+							figcaption.figure-caption
+									i.fas.fa-info-circle.mr-2
+									| Video created with <a href="http://www.mysimpleshow.com/" target="_blank">mySimpleShow</a>
 
 		section.py-5.theme-bg-light
 			.container
@@ -41,38 +74,5 @@ body
 					.col-12.col-lg-6
 						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-cast-vote-start.png")
 
-		section.py-5
-			.container
-				.row
-					.col-12.col-lg-6
-						h3 Voting in LIQUIDO
-						p.
-							In LIQUIDO you don't just vote for or against one proposal. Instead you can sort all Proposals
-							into your personally preferred order.
-						p.
-							When the voting phase of a poll is finished, then the winning proposal is calculated
-							with the well researched <a href="https://en.wikipedia.org/wiki/Ranked_pairs">Ranked Pairs</a> electoral system.
-						a.btn.btn-secondary.mb-5(href="doc-index.html") Read more&nbsp;
-							i.fas.fa-angle-double-right
-					.col-12.col-lg-6
-						img.figure-img.img-fluid.border.shadow.rounded(src="images/screenshot-sort-proposals.png")
-
-		section.py-5.theme-bg-light
-			.container
-					.row
-						.col-12.col-lg-6
-							h3 Liquid Democracy
-							blockquote
-								| Liquid Democracy (also known as delegative democracy) is a form of democracy whereby an electorate has the option of vesting voting power in delegates rather than voting directly themselves.
-								| Voters can either vote directly or delegate their vote to other participants; voters may also select different delegates for different issues.
-								footer.blockquote-footer
-									a(href="https://en.wikipedia.org/wiki/Liquid_democracy" target="_blank") https://en.wikipedia.org/wiki/Liquid_democracy
-							a.btn.btn-primary.btn-sm.my-3(href="doc-index.html#liquido-thesis") Liquido Thesis&nbsp;
-								i.fas.fa-angle-double-right
-						.col-12.col-lg-6.text-center
-							iframe(width="560" height="315" src="https://www.youtube.com/embed/jPsfm6Y49aA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-							figcaption.figure-caption
-									i.fas.fa-info-circle.mr-2
-									| Video created with <a href="http://www.mysimpleshow.com/" target="_blank">mySimpleShow</a>
 
 	include includes/_footer.pug
