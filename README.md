@@ -14,5 +14,10 @@ Then you can run a dev server with `gulp watch`
 
 
 
+# Design Inspirations
+
+ - https://dribbble.com/shots/8389298-Daml-Homepage-Motion    Very nice landing page for software product 
+
+
 
 

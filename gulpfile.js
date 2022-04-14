@@ -8,12 +8,13 @@ const cssnano = require("cssnano");
 const del = require("del");
 //const eslint = require("gulp-eslint");
 const gulp = require("gulp");
-const imagemin = require("gulp-imagemin");
+//const imagemin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
-const sass = require("gulp-sass");
+//const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('sass'));
 const pug = require('gulp-pug');
 
 // Custom directory structure of your project
@@ -21,9 +22,11 @@ const
 	pugSource   = "./pug/**/!(_)*.pug",
 	pugIncludes = "./pug/includes/**/*.pug",
 	jsSource    = "./assets/**/*.js",
-	jsDest      = "./_site/assets/",
+	jsDest      = "./_site/",
 	imgSource   = "./assets/images/**/*",
 	imgDest     = "./_site/images",
+	cssSource   = "./assets/css/**/*",
+	cssDest     = "./_site/css/",
 	scssSources = "./assets/scss/**/*.scss",
 	scssDest    = "./_site/css/",
 	htmlSource  = "./html/**/*.html",
@@ -46,12 +49,21 @@ function browserSyncReload(done) {
   done();
 }
 
+// Copy asssets
+function copyAssets() {
+	return gulp.src(imgSource)
+    .pipe(gulp.dest(imgDest))
+}
+
+
+
 // Clean assets
-function clean() {
+function cleanAssets() {
   return del(["./_site/assets/"]);
 }
 
 // Optimize Images
+/*
 function images() {
   return gulp
     .src(imgSource)
@@ -73,9 +85,15 @@ function images() {
     )
     .pipe(gulp.dest(imgDest));
 }
+*/
 
 // CSS task
 function css() {
+	return gulp.src(cssSource)
+    .pipe(gulp.dest(cssDest))
+
+
+	/*
   return gulp
     .src(scssSources)
     .pipe(plumber())
@@ -85,6 +103,7 @@ function css() {
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(gulp.dest(scssDest))
     .pipe(browsersync.stream());
+	*/
 }
 
 /*
@@ -102,10 +121,10 @@ function scriptsLint() {
 // Transpile, concatenate and minify scripts
 function scripts() {
   return gulp
-	.src(jsSource)
-	//.pipe(plumber())
-	.pipe(gulp.dest(jsDest))
-	.pipe(browsersync.stream())
+		.src(jsSource)
+		//.pipe(plumber())
+		.pipe(gulp.dest(jsDest))
+		.pipe(browsersync.stream())
 }
 
 // Render pug files to HTML
@@ -119,7 +138,7 @@ function renderPug() {
 
 // define complex tasks
 //const jsLint = gulp.series(scriptsLint, scripts);
-const build  = gulp.series(clean, gulp.parallel(renderPug, css, images, scripts));
+const build  = gulp.series(cleanAssets, gulp.parallel(renderPug, css, copyAssets, scripts));
 const watch  = gulp.parallel(watchFiles, browserSync);
 
 // Watch files
@@ -131,19 +150,19 @@ function watchFiles() {
   gulp.watch(
     [
       pugSource,
-	  htmlSource
+	  	htmlSource
     ],
     gulp.series(build, browserSyncReload)
   );
   */
-  gulp.watch(imgSource, images);
+  //gulp.watch(imgSource, images);
 }
 
 // export tasks
-exports.images = images;
+//exports.images = images;
 exports.css = css;
 exports.scripts = scripts;
-exports.clean = clean;
+exports.cleanAssets = cleanAssets;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;
